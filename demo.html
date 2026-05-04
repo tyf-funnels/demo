@@ -1,576 +1,1449 @@
-cat > /home/claude/rebuilt_landing.html << 'HTMLEOF'
-<!DOCTYPE html><!-- Last Published: Thu Apr 30 2026 21:03:59 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.unit21.ai" data-wf-page="69ac1a0ea0d8a42f48d532fa" data-wf-site="61e589aa65b0300f0d3e0b70" lang="en"><head><meta charset="utf-8"/><link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/><title>Stop Losing Money to Fraud. Start Winning Back Revenue | Unit21</title><meta content="Unit21 stops financial crime before it costs you. AI agents that detect, investigate, and resolve fraud and AML cases — automatically — with every decision." name="description"/><meta content="Stop Losing Money to Fraud. Start Winning Back Revenue | Unit21" property="og:title"/><meta content="Unit21 stops financial crime before it costs you. AI agents that detect, investigate, and resolve fraud and AML cases — automatically — with every decision." property="og:description"/><meta content="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69adef97057fd6b3d4515fb9_social-opengraph-general.png" property="og:image"/><meta content="Stop Losing Money to Fraud. Start Winning Back Revenue | Unit21" property="twitter:title"/><meta content="Unit21 stops financial crime before it costs you. AI agents that detect, investigate, and resolve fraud and AML cases — automatically — with every decision." property="twitter:description"/><meta content="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69adef97057fd6b3d4515fb9_social-opengraph-general.png" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="68f4MuGA-V3tq_BAt49sNpU9XGhN3hGCFG2UdOCkF4w" name="google-site-verification"/><link href="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/css/unit-21.shared.fdf354075.min.css" rel="stylesheet" type="text/css" integrity="sha384-/fNUB1ZRwKUhYX5UwctNz7UhK7qQD0KbB4tt7mLBbA+62fO4/YZiaBgzY2I5Actg" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Anton:300,400,500,600,700","IBM Plex Sans:300,400,500,600,700","Inter:300,400,500,600,700","Permanent Marker:300,400,500,600,700","Space Mono:300,400,500,600,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69b09cb8b7fdd2b7f7adf73e_unit21-icon-black-coral_32x32%20(1).png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69b09ccf4f13195b087dc7bc_unit21-icon-black-coral_256x256%20(1).png" rel="apple-touch-icon"/><link href="https://www.unit21.ai" rel="canonical"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Series — Real Connections. Real People.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-link { text-decoration: underline; }
-label { display: block; text-align: left; font-weight: 700; margin-bottom: 8px !important; }
-select { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url(https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/620b93abea95cd45e784c65f_arrow-down-sign-to-navigate.png); background-position: 92% 50%; background-size: 12px 12px; background-repeat: no-repeat; }
-textarea { max-height: 100px; max-width: 100%; min-height: 100px; min-width: 100%; border-radius: 8px !important; }
+  :root {
+    --bg: #0a0a0b;
+    --surface: #111113;
+    --surface2: #18181c;
+    --border: rgba(255,255,255,0.07);
+    --accent: #3effa3;
+    --accent2: #1ad87a;
+    --text: #f0f0f2;
+    --muted: #7a7a85;
+    --imsg-blue: #0b84fe;
+    --imsg-bubble: #1c1c1e;
+    --radius: 16px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NOISE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 72px;
+    background: rgba(10,10,11,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-ghost {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.2s, color 0.2s;
+    text-decoration: none;
+  }
+
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.25); color: #fff; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-1px); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 120px 5% 80px;
+    gap: 80px;
+    position: relative;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(62,255,163,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-glow-2 {
+    position: absolute;
+    top: 40%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(11,132,254,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(62,255,163,0.08);
+    border: 1px solid rgba(62,255,163,0.2);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-badge-dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 1.125rem;
+    color: var(--muted);
+    max-width: 440px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+
+  .btn-hero {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(62,255,163,0.25);
+  }
+
+  .btn-hero:hover {
+    background: var(--accent2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 50px rgba(62,255,163,0.35);
+  }
+
+  .btn-hero-ghost {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 15px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-hero-ghost:hover { border-color: rgba(255,255,255,0.3); }
+
+  .hero-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+
+  .avatars {
+    display: flex;
+  }
+
+  .avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    margin-left: -8px;
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    overflow: hidden;
+  }
+
+  .avatar:first-child { margin-left: 0; }
+
+  .avatar-a { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+  .avatar-b { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+  .avatar-c { background: linear-gradient(135deg, #fd79a8, #e84393); }
+  .avatar-d { background: linear-gradient(135deg, #55efc4, #00b894); }
+  .avatar-e { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+
+  .social-proof-text {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .social-proof-text strong { color: var(--text); }
+
+  /* ─── MOCKUP ─── */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 0.9s 0.2s ease both;
+    position: relative;
+  }
+
+  .phone-frame {
+    width: 280px;
+    height: 570px;
+    background: var(--surface);
+    border-radius: 44px;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 40px 120px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+
+  .phone-notch {
+    width: 100px;
+    height: 28px;
+    background: #000;
+    border-radius: 0 0 18px 18px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .phone-screen {
+    padding: 8px 12px 16px;
+    height: calc(100% - 28px);
+    display: flex;
+    flex-direction: column;
+    background: #000;
+  }
+
+  .chat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0 14px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    margin-bottom: 16px;
+  }
+
+  .chat-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3effa3, #0b84fe);
+    flex-shrink: 0;
+  }
+
+  .chat-name { font-size: 0.8rem; font-weight: 600; color: #fff; }
+  .chat-status { font-size: 0.65rem; color: #3effa3; }
+
+  .chat-messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .msg {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    animation: msgIn 0.5s ease both;
+  }
+
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .msg.out { align-self: flex-end; }
+  .msg.in  { align-self: flex-start; }
+
+  .bubble {
+    padding: 9px 13px;
+    border-radius: 18px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .msg.out .bubble {
+    background: var(--imsg-blue);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+
+  .msg.in .bubble {
+    background: #2c2c2e;
+    color: #fff;
+    border-bottom-left-radius: 4px;
+  }
+
+  .msg-time { font-size: 0.6rem; color: #636366; margin-top: 3px; padding: 0 4px; }
+  .msg.out .msg-time { text-align: right; }
+
+  .chat-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1c1c1e;
+    border-radius: 20px;
+    padding: 8px 14px;
+    margin-top: 12px;
+  }
+
+  .chat-input-text { flex: 1; font-size: 0.75rem; color: #636366; }
+  .chat-input-send {
+    width: 24px; height: 24px;
+    background: var(--imsg-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* floating card */
+  .float-card {
+    position: absolute;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+  }
+
+  .float-card-1 {
+    bottom: 60px;
+    right: -60px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .float-card-2 {
+    top: 80px;
+    left: -70px;
+    animation: float 4s ease-in-out 2s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .float-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(62,255,163,0.2), rgba(62,255,163,0.05));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .float-label { font-size: 0.7rem; color: var(--muted); }
+  .float-value { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+
+  /* ─── LOGOS ─── */
+  .logos {
+    padding: 40px 5%;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logos-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .logos-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .logo-item {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .logo-item:hover { color: rgba(255,255,255,0.55); }
+
+  /* ─── FEATURES ─── */
+  .section {
+    padding: 120px 5%;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px; height: 1.5px;
+    background: var(--accent);
+  }
+
+  .section-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    line-height: 1.7;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 64px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .feature-card {
+    background: var(--surface);
+    padding: 40px 36px;
+    transition: background 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .feature-card:hover { background: var(--surface2); }
+  .feature-card:hover::before { opacity: 1; }
+
+  .feat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .feat-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  .feat-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ─── HOW IT WORKS ─── */
+  .how-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .step:last-child { border-bottom: none; }
+  .step:hover { opacity: 1 !important; }
+
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--border);
+    line-height: 1;
+    width: 40px;
+    flex-shrink: 0;
+    transition: color 0.3s;
+  }
+
+  .step:hover .step-num,
+  .step.active .step-num { color: var(--accent); }
+
+  .step-content {}
+
+  .step-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+
+  .step-desc {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .how-visual {
+    background: var(--surface);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .how-visual-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; }
+  .dot-y { background: #febc2e; }
+  .dot-g { background: #28c840; }
+
+  .match-card {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .profile-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--surface2);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .profile-row:nth-child(2) { animation-delay: 0.15s; }
+  .profile-row:nth-child(3) { animation-delay: 0.3s; }
+  .profile-row:hover { border-color: rgba(62,255,163,0.3); }
+
+  .profile-pic {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .p1 { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+  .p2 { background: linear-gradient(135deg, #fd79a8, #e84393); }
+  .p3 { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+
+  .profile-info {}
+  .profile-name { font-size: 0.875rem; font-weight: 600; margin-bottom: 2px; }
+  .profile-tag { font-size: 0.75rem; color: var(--muted); }
+
+  .profile-match {
+    margin-left: auto;
+    background: rgba(62,255,163,0.1);
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(62,255,163,0.2);
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-section {
+    padding: 120px 5%;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+  }
+
+  .testimonial {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .testimonial:hover {
+    border-color: rgba(62,255,163,0.2);
+    transform: translateY(-4px);
+  }
+
+  .t-stars { color: var(--accent); font-size: 0.85rem; margin-bottom: 16px; letter-spacing: 2px; }
+
+  .t-quote {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .t-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .t-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .ta1 { background: linear-gradient(135deg, #74b9ff, #0984e3); }
+  .ta2 { background: linear-gradient(135deg, #55efc4, #00cec9); }
+  .ta3 { background: linear-gradient(135deg, #fab1a0, #e17055); }
+
+  .t-name { font-size: 0.875rem; font-weight: 600; }
+  .t-role { font-size: 0.75rem; color: var(--muted); }
+
+  /* ─── STATS ─── */
+  .stats-section {
+    padding: 80px 5%;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .stat-item {
+    background: var(--surface);
+    padding: 40px 32px;
+    text-align: center;
+    transition: background 0.25s;
+  }
+
+  .stat-item:hover { background: var(--surface2); }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label { font-size: 0.875rem; color: var(--muted); }
+
+  /* ─── PRICING ─── */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+    align-items: start;
+  }
+
+  .pricing-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+
+  .pricing-card.featured {
+    border-color: rgba(62,255,163,0.4);
+    background: linear-gradient(160deg, rgba(62,255,163,0.04), var(--surface));
+  }
+
+  .pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .plan-name { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 12px; }
+
+  .plan-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .plan-period { font-size: 0.8rem; color: var(--muted); margin-bottom: 24px; }
+
+  .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+
+  .plan-feature {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+  }
+
+  .plan-feature.active { color: var(--text); }
+
+  .plan-feature::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: 18px;
+    flex-shrink: 0;
+  }
+
+  .plan-feature.inactive { color: rgba(255,255,255,0.2); }
+  .plan-feature.inactive::before { content: '—'; color: rgba(255,255,255,0.15); }
+
+  .btn-plan {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+
+  .btn-plan:hover { border-color: rgba(255,255,255,0.25); background: var(--surface2); }
+
+  .btn-plan.featured {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+  }
+
+  .btn-plan.featured:hover { background: var(--accent2); border-color: var(--accent2); }
+
+  /* ─── CTA SECTION ─── */
+  .cta-section {
+    padding: 120px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(62,255,163,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-section .section-headline { font-size: clamp(2.5rem, 4vw, 4rem); max-width: 700px; margin: 0 auto 16px; }
+  .cta-section .section-sub { margin: 0 auto 40px; text-align: center; }
+
+  .cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .cta-fine {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text);
+  }
+
+  .footer-logo span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--text); }
+
+  .footer-copy { font-size: 0.8rem; color: var(--muted); }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; gap: 48px; padding-top: 100px; }
+    .hero-visual { display: none; }
+    .features-grid { grid-template-columns: 1fr; }
+    .how-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    .float-card { display: none; }
+  }
 </style>
-<style>
-.unique-wrapper .product-accordion-wrapper .product-accordion { cursor:pointer; }
-.unique-wrapper .product-accordion-wrapper .product-accordion.active, .unique-wrapper .product-accordion-wrapper .product-accordion:hover { border-top: 1px solid #ff6258; }
-.unique-wrapper .product-accordion-wrapper .product-accordion.active .production-accordion-title, .unique-wrapper .product-accordion-wrapper .product-accordion:hover .production-accordion-title{ color: #ff6258; }
-.unique-wrapper .product-accordion-wrapper .product-accordion .product-accordion-text, .unique-wrapper .product-accordion-images .product-accordion-image { display: none; }
-.unique-wrapper .product-accordion-wrapper .product-accordion.active .product-accordion-text, .unique-wrapper .product-accordion-images .product-accordion-image.active { display: block; }
-.unique-wrapper .product-accordion-wrapper .product-accordion.active .product-accordion-caret svg { transform: rotate(180deg) }
-.unique-wrapper .product-accordion-wrapper .product-accordion .product-accordion-caret svg { transition: transform .3s ease-in-out; }
-.unique-wrapper .product-accordion-wrapper .product-accordion.active .product-accordion-caret svg path, .unique-wrapper .product-accordion-wrapper .product-accordion:hover .product-accordion-caret svg path { fill: #ff6258; }
-.red-dot, .line-red { display:none; }
-@media screen and (min-width: 1040px) { .red-dot, .line-red { display:block; } }
-.use-case-wrapper .use-case-container { display: none; scroll-margin: 120px; }
-.use-case-wrapper .use-case-container.active { display: block; }
-</style>
-</head><body class="nc-body"><div class="nc-main_wrap"><div class="css w-embed"><style>
-ul li::marker { color: #000!important; }
-body { font-size: clamp(14px, 1vw, 18px); }
-a { color: inherit; }
-.w-dropdown-toggle { color: inherit; }
-input, textarea, select { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 0; background-image: none; }
-.nc-card.ncc-resource:hover .c-icon path{ stroke: #FF6158!important; }
-.nc-card.ncc-resource .c-icon{ transform: scale(1, 1); transition: all .2s ease; }
-.nc-card.ncc-resource:hover .c-icon{ transform: scale(1.05, 1.05); transition: all .2s ease; }
-.ncc-title-mark, .ncc-title-underline, .ncc-title-mark_large{ position: relative; overflow: auto; z-index: 1; }
-.ncc-title-mark:after{ content: ''; display: block; background-image: url(https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697aacf93c84cb0638282997_title-mark.svg); background-size: contain; background-position: center; background-repeat: no-repeat; position: absolute; width: 110%; height: 100%; top: 8%; left: -5%; z-index: 2; }
-.ncc-title-mark.ncc-height_75:after{ height: 75%!important; }
-.ncc-title-mark_large:after{ content: ''; display: block; background-image: url(https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697ad1c69419ce4ecad43933_Ellipse%2022.svg); background-size: contain; background-position: center; background-repeat: no-repeat; position: absolute; width: 110%; height: 100%; top: 8%; left: -5%; z-index: 2; }
-.ncc-title-mark_large.ncc-width_100:after{ width: 100%; margin: 0 auto; left: 0; right: 0; }
-.ncc-title-underline:after{ content: ''; display: block; position: absolute; bottom: 15%; left: 0; background-color: #FF6158; height: 1px; width: 100%; z-index: -1; }
-.ncc-ellipsis-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
-.ncc-ellipsis-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
-</style></div>
+</head>
+<body>
 
-<!-- HERO BG -->
-<div class="nc-hero_video-bg"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697aa29823bbf11712403caf_Hero%20(1)-p-500.avif 500w, https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697aa29823bbf11712403caf_Hero%20(1).avif 1920w" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697aa29823bbf11712403caf_Hero%20(1).avif" loading="lazy" class="nc_hero-bg ncc-home"/><div class="nc-cta-bg_overlay-3"></div></div>
-
-<!-- TOP BANNER -->
-<div class="cc-mobile_lands-none w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><nav class="nc-top-banner"><div class="nc-container cc-ptb_0 ncc-top_banner"><div id="w-node-_110d35cc-5d40-08b2-d208-c40da1d745dd-a1d745d8" class="w-layout-hflex flex-block-15 cc-2 cc-font_spacemono cc-text_black-500 cc-margin_0"><div class="nc-text_xs cc-mobile_lands-text_center">Your analysts are drowning in false positives. <strong>There's a fix.</strong></div><div class="nc-text_xs cc-tablet_none"> |</div><a href="https://www.unit21.ai/schedule-demo" class="c-wrap cc-horizontal cc-align_center cc-gap_05 w-inline-block"><div class="nc-text_xs cc-text_black-500 cc-top-banner_link">See the 15-minute live demo</div><div class="code-embed-16 w-embed"><svg width="100%" height="100%" viewBox="0 0 58 54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.875 4.5L53.375 27L30.875 49.5M50.25 27L4.625 27" stroke="black" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a></div></div></nav></div></div></div>
-
-<!-- NAVBAR -->
-<div class="navbar-abs"><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nc-navbar ncc-special_scroll w-nav"><nav class="nc-navbar-wrapper"><a href="/" aria-current="page" class="nc_navbar-logo_wrap w-nav-brand w--current"><img loading="eager" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697a9d65c90dc06b81dd82ee_new-ui-logo.svg" alt="" class="nc-navbar-logo"/></a><nav role="navigation" class="nc-nav-menu w-nav-menu"><div class="nc-nav_options"><div data-delay="0" data-hover="true" class="nc-nav_dropdown w-dropdown"><div class="nc-nav_dropdown-toggle w-dropdown-toggle"><div class="nc-nav_dropdown-toggle_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 52 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.64 -0.000156403L51.88 4.24384L28.772 27.3598C28.4017 27.7325 27.9614 28.0282 27.4764 28.23C26.9914 28.4318 26.4713 28.5356 25.946 28.5356C25.4207 28.5356 24.9006 28.4318 24.4156 28.23C23.9306 28.0282 23.4903 27.7325 23.12 27.3598L0 4.24384L4.24 0.00384331L25.94 21.6998L47.64 -0.000156403Z" fill="currentcolor"/></svg></div><div class="nc-nav_dropdown-text">Platform</div></div><nav class="nc-nav_dropdown-content_container ncc-product w-dropdown-list"><div class="nc-nav_dropdown-content_wrap ncc-product"><div class="nc-nav_dropdown-content ncc-product"><div class="w-dyn-list"><div role="list" class="cc-height_100 w-dyn-items"><div role="listitem" class="cc-height_100 w-dyn-item"><a data-w-id="ea46433f-3683-5574-a95f-f637c139c767" href="/products/ai-agent" class="nc-nav_dropdown-content_column ncc-products-cta w-inline-block"><div class="nc-nav_dropdown-featured"><div class="nc-nav_dropdown-featured_content"><div id="nav-card-heading" class="nc-paragraph_xl cc-font_bastervville ncc-featured-nav">AI Risk Infrastructure</div><div class="c-nav_dropdown-subhead cc-text_cream">One platform. Detection, investigation, and filing — fully automated.</div><div class="nc-button ncc-transparent ncc-featured-card_nav"><div class="c-button_text">See How It Works</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></div></div></div><div class="nc-nav_featured-item_bg"><img alt="AI Risk Infrastructure" loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa187c72b9cd04fc3bc699_resource%20vector.svg" class="c-bg ncc-featured-item_nav"/><div style="background-color:#ff6158" class="nc-color_bg"></div></div></a></div></div></div><div class="nc-nav_dropdown-content_column-wrap"><div id="w-node-_644729bc-a596-98ce-661f-d62b247a4417-1de86213" class="nc-nav_dropdown-content_column ncc-top"><a href="/products/ai-agent" class="nc-nav_dropdown-link ncc-head w-inline-block"><div class="nc-nav_dropdown-head ncc-link">AI Risk Infrastructure</div><div class="nc-icon w-embed"><svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9897 9.97168C18.5048 9.92534 18.0199 9.87385 17.5453 9.77087C14.9094 9.21478 12.8047 7.11916 12.2373 4.48805C12.1393 4.04524 12.1393 3.48915 12.0361 3.09268C12.0258 3.05664 12.0361 3.0103 11.9845 3C11.9123 3.55609 11.8607 4.11732 11.7318 4.66311C11.1127 7.23759 8.94105 9.31261 6.33088 9.80176C5.89241 9.88415 5.43847 9.90989 5 9.97683C5.01032 10.0283 5.05674 10.0232 5.09285 10.0283C5.40752 10.0901 5.76345 10.0901 6.09359 10.1467C8.91525 10.6307 11.1592 12.7109 11.7833 15.512C11.8917 16.0011 11.9433 16.5057 12 17.0051C12.0877 16.5314 12.1135 16.0423 12.2167 15.5686C12.8357 12.7006 15.157 10.5535 18.0663 10.121C18.3449 10.0798 18.6286 10.0747 18.9071 10.0386C18.9484 10.0335 18.9897 10.0386 19 9.98198L18.9897 9.97168Z" fill="#FF6158"/><path d="M7.9941 3.98235C7.71702 3.95588 7.43994 3.92647 7.16876 3.86765C5.66249 3.55 4.45984 2.35294 4.13559 0.85C4.07959 0.597059 4.07959 0.279412 4.02063 0.0529412C4.01474 0.0323529 4.02063 0.00588235 3.99116 0C3.94989 0.317647 3.92041 0.638235 3.84672 0.95C3.493 2.42059 2.25203 3.60588 0.760501 3.88529C0.509948 3.93235 0.250553 3.94706 0 3.98529C0.00589536 4.01471 0.0324245 4.01177 0.0530582 4.01471C0.232867 4.05 0.436257 4.05 0.624908 4.08235C2.23729 4.35882 3.51953 5.54706 3.8762 7.14706C3.9381 7.42647 3.96758 7.71471 4 8C4.05011 7.72941 4.06485 7.45 4.1238 7.17941C4.47752 5.54118 5.80398 4.31471 7.46647 4.06765C7.62565 4.04412 7.78777 4.04118 7.94694 4.02059C7.97052 4.01765 7.9941 4.02059 8 3.98824L7.9941 3.98235Z" fill="#FFF4CE"/></svg></div></a><a href="/products/ai-agent" class="nc-button ncc-2 w-inline-block"><div class="c-button_text">From first alert to filed SAR — AI handles the full loop</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="#000000"/></svg></div></a></div><div class="nc-nav_dropdown-content_column"><a href="/persona/fraud" class="nc-nav_dropdown-link ncc-head w-inline-block"><div class="nc-nav_dropdown-head ncc-link">Fraud Prevention</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#FFF4CE" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/real-time-payment-fraud-prevention" class="nc-nav_dropdown-link w-inline-block"><div class="nc-nav_dropdown-subhead">Real-Time Monitoring</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/device-intelligence" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Device Intelligence</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/fraud-consortium" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Consortium Intelligence</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a></div><div class="nc-nav_dropdown-content_column"><div class="nc-nav_dropdown-content_column ncc-inner"><a href="/persona/aml" class="nc-nav_dropdown-link ncc-head w-inline-block"><div class="nc-nav_dropdown-head ncc-link">AML Compliance</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#FFF4CE" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/aml-transaction-monitoring" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Transaction Monitoring</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/case-management" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Case Management</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/real-time-payment-screening" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Payment Screening</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/sanction-screening-and-monitoring" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Sanctions Screening</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/customer-risk-rating" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Customer Risk Rating</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/regulatory-filing" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Regulatory Filings</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a></div></div><div class="nc-nav_dropdown-content_column ncc-last"><div class="nc-nav_dropdown-content_column ncc-inner cc-2"><div class="nc-nav_dropdown-head">By Industry</div><a href="/markets/fintech" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Fintech</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/markets/crypto-web3-platforms" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Crypto &amp; Web3</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/sponsor-bank-operating-system" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Sponsor Banks</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/markets/financial-institutions" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Banks &amp; Credit Unions</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a></div></div></div><div class="custom-css w-embed"><style>.nc-nav_dropdown-content_column.ncc-products-cta .ncc-featured-nav { text-decoration: none; } .nc-nav_dropdown-content_column.ncc-products-cta:hover .ncc-featured-nav { text-decoration-line: underline; text-decoration-color: #000; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }</style></div></div><div class="c-nav_dropdown-shadow"></div></div></nav></div><div data-delay="0" data-hover="true" class="nc-nav_dropdown w-dropdown"><div class="nc-nav_dropdown-toggle w-dropdown-toggle"><div class="nc-nav_dropdown-text">Company</div><div class="nc-nav_dropdown-toggle_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 52 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.64 -0.000156403L51.88 4.24384L28.772 27.3598C28.4017 27.7325 27.9614 28.0282 27.4764 28.23C26.9914 28.4318 26.4713 28.5356 25.946 28.5356C25.4207 28.5356 24.9006 28.4318 24.4156 28.23C23.9306 28.0282 23.4903 27.7325 23.12 27.3598L0 4.24384L4.24 0.00384331L25.94 21.6998L47.64 -0.000156403Z" fill="currentcolor"/></svg></div></div><nav class="nc-nav_dropdown-content_container cc-company w-dropdown-list"><div class="nc-nav_dropdown-content_wrap ncc-company"><div class="nc-nav_dropdown-content ncc-company"><div id="w-node-_5980c6cf-0efd-900d-ca29-ede51de86286-1de86213" class="nc-nav_dropdown-content_column ncc-inner"><a href="https://unit21.zohorecruit.com/jobs/Careers" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Careers</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/company/newsroom" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Newsroom</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/contact-unit21" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Contact Us</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a></div></div><div class="c-nav_dropdown-shadow"></div></div></nav></div><div data-delay="0" data-hover="true" class="c-nav_dropdown w-dropdown"><div class="nc-nav_dropdown-toggle w-dropdown-toggle"><div class="nc-nav_dropdown-text">Resources</div><div class="nc-nav_dropdown-toggle_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 52 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M47.64 -0.000156403L51.88 4.24384L28.772 27.3598C28.4017 27.7325 27.9614 28.0282 27.4764 28.23C26.9914 28.4318 26.4713 28.5356 25.946 28.5356C25.4207 28.5356 24.9006 28.4318 24.4156 28.23C23.9306 28.0282 23.4903 27.7325 23.12 27.3598L0 4.24384L4.24 0.00384331L25.94 21.6998L47.64 -0.000156403Z" fill="currentcolor"/></svg></div></div><nav class="nc-nav_dropdown-content_container ncc-resources w-dropdown-list"><div class="nc-nav_dropdown-content_wrap"><div class="nc-nav_dropdown-content ncc-resources"><div id="w-node-_5980c6cf-0efd-900d-ca29-ede51de8629f-1de86213" class="nc-nav_dropdown-content_column ncc-inner"><a href="/resources/risk-compliance-blog" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Blog</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/resource-center" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Resource Library</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/customers" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Customer Results</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="https://docs.unit21.ai/password?redirect=/docs/overview" class="nc-nav_dropdown-link w-inline-block"><div class="c-nav_dropdown-subhead">Documentation</div><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg></div></a></div><div class="nc-nav_dropdown-content_column ncc-inner"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="w-dyn-item"><div style="background-color:#fff4ce" class="nc-nav_dropdown-featured ncc-resources"><div class="nc-nav_dropdown-featured_content ncc-resources"><div class="c-wrap ncc-gap_1"><div class="nc-tag ncc-s">Live Demo</div><div class="nc-nav_dropdown-featured_text">Watch AI handle a real fraud investigation from alert to closure — in 4 minutes</div></div><a href="https://www.unit21.ai/schedule-demo" class="nc-button ncc-transparent ncc-featured-card_nav ncc-resoruces w-inline-block"><div class="c-button_text">Book your live session</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div><img alt="Watch AI handle a real fraud investigation" loading="lazy" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69a09a110297a2984a0adcc1_featured%20pattern%202.svg" class="c-bg"/></div></div></div></div></div></div><div class="c-nav_dropdown-shadow"></div></div></nav></div><a href="/customers" class="nc-nav_dropdown-text">Results</a></div></nav><div class="menu-and-search-wrap"><div class="nav-menu-inside-wrap global-nav"><div id="w-node-_5980c6cf-0efd-900d-ca29-ede51de862c7-1de86213" data-w-id="5980c6cf-0efd-900d-ca29-ede51de862c7" class="search-icon-wrap"></div></div><a href="/schedule-demo" class="nc-button ncc-tablet_s w-inline-block"><div class="c-button_text">Book a Demo</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a><div class="nc-menu-button w-nav-button"><div class="nc-icon ncc-nav-menu w-embed"><svg width="100%" height="100%" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="1" x2="23" y2="1" stroke="#FF6158" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="11" x2="23" y2="11" stroke="#FF6158" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="21" x2="23" y2="21" stroke="#FF6158" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></nav><div class="search-wrap"><form action="/search" class="search w-form"><input class="search-bar box-shadow searchbox top-nav w-input" maxlength="256" name="query" placeholder="Search..." type="search" id="search-3" required=""/><input type="submit" class="button-3 search search-page w-button" value="Search"/></form></div><div data-w-id="5980c6cf-0efd-900d-ca29-ede51de862d2" class="search-mega-wrap"></div></div></div>
-
-<!-- ============================================================ -->
-<!-- HERO SECTION — COMPLETELY REWRITTEN -->
-<!-- ============================================================ -->
-<section class="c-section cc-z_1">
-  <div class="nc-container ncc-pt_5">
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850acc4-48d532fa" class="c-wrap cc-align_center ncc-gap_2-25">
-      <div class="c-wrap cc-relative ncc-gap_0 cc-align_center">
-        <div class="nc-tag">Used by Chime, Brex, Sallie Mae &amp; 100+ financial institutions</div>
-        <h1 class="nc-text_xxl ncc-hero-title">Your fraud team reviews <span class="ncc-title-mark">thousands</span> of alerts.<br/><span class="ncc-title-underline">Most are noise.</span></h1>
-      </div>
-      <p class="nc-paragraph_m cc-text_cream cc-width_60">Unit21's AI agents don't just flag risk — they investigate it. From first alert to SAR filing, the entire financial crime lifecycle runs automatically. Your analysts focus on decisions that matter. Everything else gets handled.</p>
-      <div class="c-wrap cc-horizontal cc-gap_2 cc-mobile_lands-vertical_center cc-mobile_lands-gap_0">
-        <a href="/schedule-demo" class="nc-button w-inline-block">
-          <div class="c-button_text">See It Handle a Live Case</div>
-          <div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div>
-        </a>
-        <a href="/products/ai-agent" class="nc-link ncc-gap_1 w-inline-block">
-          <div class="c-button_text">How the AI works →</div>
-          <div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div>
-        </a>
-      </div>
-    </div>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Series<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#" class="btn-ghost">Log in</a>
+    <a href="#" class="btn-primary">
+      <span>Start for free</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
-</section>
+</nav>
 
-<!-- LOGO LOOP — TRUST RAIL -->
-<section class="c-section cc-bg_black-500 cc-z_1"><section class="c-section cc-z_1"><div class="nc-container cc-logos"><div id="w-node-ae009708-e536-ea43-0d28-644e56d7650d-56d7650b" class="w-layout-vflex nc-logo_loop"><div class="c-loop_track"><div class="collection-list-wrapper-15 w-dyn-list"><div role="list" class="loop-collection-2 w-dyn-items"><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="American First Credit Union" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69219ceb76518d0b3b4e52e7_america-first.svg" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div><div class="c-icon cc-xs w-embed"><svg width="100%" height="1005" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.24609H9.49219M9.49219 5.24609L5.24609 1M9.49219 5.24609L5.24609 9.49219" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Brex" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69219ca2c997d1dcd7d6d635_brex.svg" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div><div class="c-icon cc-xs w-embed"><svg width="100%" height="1005" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.24609H9.49219M9.49219 5.24609L5.24609 1M9.49219 5.24609L5.24609 9.49219" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="CCBank" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69d5835ec85b6af518a8b13a_images%201%20%5BVectorized%5D.svg" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Chime" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01b1da2be9622fc99f3_68776de40591963bc31767c7_chime.webp" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="FIS" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69219d0a39cc070f62b27757_fis.svg" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Greendot Bank" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01c6dcf8a7fed331108_68776d05af002b1018a3d32b_greendot-bank.webp" class="nc-logo_loop_hero"/><a href="/customers/greendot" class="nc-case-study_tag w-inline-block"><div>Case Study</div><div class="c-icon cc-xs w-embed"><svg width="100%" height="1005" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.24609H9.49219M9.49219 5.24609L5.24609 1M9.49219 5.24609L5.24609 9.49219" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Intuit" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01c20d691d1a3ee5873_68776cf24411d5c0c2615a0a_intuit.webp" class="nc-logo_loop_hero"/><a href="/customer-detail/intuit" class="nc-case-study_tag w-inline-block"><div>Case Study</div><div class="c-icon cc-xs w-embed"><svg width="100%" height="1005" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.24609H9.49219M9.49219 5.24609L5.24609 1M9.49219 5.24609L5.24609 9.49219" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Sallie Mae" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01d59d5a5c711e793c1_68776bac89b968deb049aa8c_sallie-mae.webp" class="nc-logo_loop_hero"/><a href="/blog/how-sallie-mae-is-future-proofing-its-fraud-and-compliance-strategies" class="nc-case-study_tag w-inline-block"><div>Case Study</div><div class="c-icon cc-xs w-embed"><svg width="100%" height="1005" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.24609H9.49219M9.49219 5.24609L5.24609 1M9.49219 5.24609L5.24609 9.49219" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Rippling" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69236d611c7d6c01d4a07cef_68d396d424c142c0f605177e_rippling.webp" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Patriot Bank" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01d59c6fa94338e2705_68776bb412c3395fb49c8254_patriot-bank.webp" class="nc-logo_loop_hero"/><a href="/customers/patriot-bank" class="nc-case-study_tag w-inline-block"><div>Case Study</div></a></div></div></div><div class="collection-list-wrapper-15 w-dyn-list"><div role="list" class="loop-collection-2 w-dyn-items"><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="American First Credit Union" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69219ceb76518d0b3b4e52e7_america-first.svg" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Brex" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69219ca2c997d1dcd7d6d635_brex.svg" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Chime" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01b1da2be9622fc99f3_68776de40591963bc31767c7_chime.webp" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Intuit" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01c20d691d1a3ee5873_68776cf24411d5c0c2615a0a_intuit.webp" class="nc-logo_loop_hero"/><a href="/customer-detail/intuit" class="nc-case-study_tag w-inline-block"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Greendot Bank" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01c6dcf8a7fed331108_68776d05af002b1018a3d32b_greendot-bank.webp" class="nc-logo_loop_hero"/><a href="/customers/greendot" class="nc-case-study_tag w-inline-block"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Sallie Mae" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01d59d5a5c711e793c1_68776bac89b968deb049aa8c_sallie-mae.webp" class="nc-logo_loop_hero"/><a href="/blog/how-sallie-mae-is-future-proofing-its-fraud-and-compliance-strategies" class="nc-case-study_tag w-inline-block"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Patriot Bank" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/6877d01d59c6fa94338e2705_68776bb412c3395fb49c8254_patriot-bank.webp" class="nc-logo_loop_hero"/><a href="/customers/patriot-bank" class="nc-case-study_tag w-inline-block"><div>Case Study</div></a></div><div role="listitem" class="nc-collection_item_logos w-dyn-item"><img alt="Rippling" loading="eager" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69236d611c7d6c01d4a07cef_68d396d424c142c0f605177e_rippling.webp" class="nc-logo_loop_hero"/><a href="#" class="nc-case-study_tag w-inline-block w-condition-invisible"><div>Case Study</div></a></div></div></div></div></div></div></section></section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
 
-<!-- ============================================================ -->
-<!-- WHY UNIT21 — COMPLETELY REWRITTEN -->
-<!-- ============================================================ -->
-<section class="c-section cc-relative cc-z_1 cc-bg_black-500">
-  <div class="nc-container ncc-ptb_7 cc-z_1 ncc-gap_7">
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850acfb-48d532fa" class="c-wrap cc-width_80 ncc-gap_3">
-      <div class="c-wrap cc-gap_0">
-        <div class="nc-tag">The problem with every other tool</div>
-        <h2 class="nc-text_xl ncc-baskervville-title cc-text_cream">You hired analysts to catch fraud.<br/>Instead, they're clearing queues.</h2>
-      </div>
-      <div class="c-wrap ncc-gap_2-45 ncc-pl_4">
-        <div class="c-wrap ncc-gap_1">
-          <div class="nc-paragraph_xl cc-300 cc-text_red-500">Most platforms stop at "alert created." Unit21 stops at "case closed."</div>
-          <p class="nc-paragraph_m cc-text_cream">Your current setup generates thousands of alerts per week. Analysts manually triage, chase data across systems, write narratives from scratch, and still take days to close a case. Unit21 eliminates that entire workflow. Our AI agents gather evidence, assess risk, write the narrative, and route to filing — without waiting for a human to start the job.</p>
-        </div>
-        <div class="c-wrap ncc-gap_1">
-          <div class="nc-paragraph_xl cc-300 cc-text_red-500">This is not a copilot. It's not a dashboard. It's the investigator.</div>
-          <p class="nc-paragraph_m cc-text_cream">Customers running Unit21 see 50–93% reductions in false positives. Case review time drops from days to minutes. Audit prep that took a week takes under 30 minutes. That's not a feature list — those are verified results from real customers.</p>
-        </div>
-      </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Social — but smarter
     </div>
-
-    <!-- 4 VALUE CARDS — REWRITTEN -->
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ad0f-48d532fa" class="nc-4x1 ncc-mobile_flex-column">
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ad10-48d532fa" class="nc-card-2 ncc-card_cream ncc-gap_08">
-        <div class="nc-icon ncc-m w-embed"><?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.98 36.5"><g id="Layer_1-2"><path d="M8.91,31.17C1.73,24.52,1.38,13.31,8.03,6.13,13.81-.09,23.27-1.31,30.45,3.24" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.07,13.57V5.17h8.41" fill="none" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.91,22.94v8.41H.5" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.07,5.34c7.18,6.66,7.53,17.86.79,25.04-5.87,6.22-15.32,7.44-22.5,2.8" fill="none" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
-        <div class="nc-tag">Alert → Filing</div>
-        <div class="c-wrap ncc-gap_08">
-          <h3 class="nc-paragraph_xl cc-font_bastervville">The entire case lifecycle, automated</h3>
-          <p class="nc-text_xs">Detection fires. The AI investigates. Evidence is gathered. Narrative is written. SAR is filed. All without a human queuing it up. Your team reviews and approves — they don't build the case from scratch.</p>
-        </div>
-      </div>
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ad19-48d532fa" class="nc-card-2 ncc-card_cream ncc-gap_08">
-        <div class="nc-icon ncc-m w-embed"><?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 57.7"><g id="Layer_1-2"><path d="M33.01,21.7l5.75-5.67" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M45.13,13.33c0,2.07-1.68,3.75-3.75,3.75s-3.75-1.68-3.75-3.75,1.68-3.75,3.75-3.75,3.75,1.68,3.75,3.75Z" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.67,16.02l-.06-8.08" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.38,6.9c-1.46,1.46-3.84,1.46-5.3,0s-1.46-3.84,0-5.3,3.84-1.46,5.3,0,1.46,3.84,0,5.3Z" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.36,38.92c0-4.62,3.75-8.37,8.37-8.37s8.37,3.75,8.37,8.37H14.36Z" fill="none" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.88,23.66c0,2.84-2.3,5.14-5.14,5.14s-5.14-2.3-5.14-5.14,2.3-5.14,5.14-5.14,5.14,2.3,5.14,5.14Z" fill="none" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
-        <div class="nc-tag">No silos</div>
-        <div class="c-wrap ncc-gap_08">
-          <h3 class="nc-paragraph_xl cc-font_bastervville">Fraud and AML share one data model</h3>
-          <p class="nc-text_xs">Fraud signals feed AML. AML patterns inform fraud detection. Device data, transaction history, entity networks — all unified. You stop the same criminal twice because both teams see the same picture.</p>
-        </div>
-      </div>
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ad22-48d532fa" class="nc-card-2 ncc-card_cream ncc-gap_08">
-        <div class="nc-icon ncc-m w-embed"><?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.92 42.82"><g id="Layer_1-2"><path d="M23.88,33.51v-11.74c0-1.1.92-1.93,1.93-1.93s1.93.92,1.93,1.93c0,1.1-.92,1.93-1.93,1.93h-7.79c-1.1,0-1.93-.92-1.93-1.93,0-1.1.92-1.93,1.93-1.93,1.01-.09,1.93.73,1.93,1.74v11.92" fill="none" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.82,33.51c4.77-1.93,7.89-6.6,7.79-11.74-.09-6.97-5.78-12.56-12.66-12.65-6.97.09-12.56,5.78-12.66,12.65-.09,5.14,3.03,9.81,7.79,11.74h9.72Z" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.83,33.05v5.32c0,2.75-2.38,3.94-5.87,3.94s-5.87-1.1-5.87-3.94v-5.32" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
-        <div class="nc-tag">Regulator-ready</div>
-        <div class="c-wrap ncc-gap_08">
-          <h3 class="nc-paragraph_xl cc-font_bastervville">Every AI decision has a paper trail</h3>
-          <p class="nc-text_xs">When a regulator asks "why did your system flag this?" — you have a complete, documented answer. Every decision Unit21 makes is mapped to your policies, logged with evidence, and fully auditable. No black boxes.</p>
-        </div>
-      </div>
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ad2b-48d532fa" class="nc-card-2 ncc-card_cream ncc-gap_08">
-        <div class="nc-icon ncc-m w-embed"><?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.4 37.73"><g id="Layer_1-2"><rect x="16.09" y="11.65" width="9.23" height="25.58" fill="none" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/><rect x="31.68" y=".5" width="9.23" height="36.73" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/><rect x=".5" y="24.44" width="9.23" height="12.79" fill="none" stroke="#ff6158" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
-        <div class="nc-tag">Built to scale</div>
-        <div class="c-wrap ncc-gap_08">
-          <h3 class="nc-paragraph_xl cc-font_bastervville">Volume grows. Headcount doesn't have to.</h3>
-          <p class="nc-text_xs">Every analyst decision teaches the system. False positive rates drop over time. New fraud patterns get detected faster. You scale your risk program without scaling your team — and the AI keeps improving with every case it closes.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img sizes="100vw" srcset="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0cf5ebbef16162d684_product-circlebg1-p-500.avif 500w, https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0cf5ebbef16162d684_product-circlebg1.avif 1966w" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0cf5ebbef16162d684_product-circlebg1.avif" loading="lazy" class="nc-circle-bg ncc-product-6"/>
-  <img sizes="100vw" srcset="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0c1edb545138789015_product-circlebg2-p-500.avif 500w, https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0c1edb545138789015_product-circlebg2.avif 1318w" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0c1edb545138789015_product-circlebg2.avif" loading="lazy" class="nc-circle-bg ncc-product-2"/>
-  <img loading="lazy" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697d4b0920cdd050b5f56986_product-bg.svg" alt="" class="nc-vector-bg ncc-product-hiw"/>
-</section>
-
-<!-- ============================================================ -->
-<!-- PRODUCT SUITE TABS — REWRITTEN COPY ONLY -->
-<!-- ============================================================ -->
-<section class="c-section cc-relative cc-bg_black-500">
-  <div class="nc-container cc-z_1">
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ad39-48d532fa" class="w-layout-vflex c-wrap ncc-gap_4">
-      <div class="c-wrap cc-gap_0">
-        <div class="nc-tag">What's inside the platform</div>
-        <h2 class="nc-text_xl cc-text_cream cc-300">Every tool your risk team needs.<br/>None of the manual work.</h2>
-        <p class="nc-paragraph_m cc-text_cream cc-width_70 ncc-mt_1">Unit21 covers the full financial crime stack — from real-time transaction blocking to SAR filing — with AI agents running operations at every stage. Configure what you need. Automate what slows you down.</p>
-      </div>
-    </div>
-
-    <div id="w-node-e0315716-b5dd-96f9-ea85-b17dcbfec1bd-48d532fa" class="c-wrap">
-      <div class="nc-automate_tab_menu ncc-inner-tabs_menu">
-        <a id="ai-tag-trigger" href="#" class="nc-automate_tab ncc-active w-inline-block"><div>AI Agents</div></a>
-        <a id="monitoring-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Real-Time Monitoring</div></a>
-        <a id="transaction-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>AML Transaction Monitoring</div></a>
-        <a id="sanction-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Sanctions Screening</div></a>
-        <a id="case-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Case Management</div></a>
-        <a id="regulatory-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Regulatory Filing</div></a>
-        <a id="customer-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Customer Risk Rating</div></a>
-        <a id="payment-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Payment Screening</div></a>
-        <a id="fraud-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Fraud Consortium</div></a>
-        <a id="device-tag-trigger" href="#" class="nc-automate_tab w-inline-block"><div>Device Intelligence</div></a>
-      </div>
-
-      <!-- AI AGENTS TAB -->
-      <div id="ai-target" class="nc-automate_tab_content">
-        <div class="nc-tab_wrap">
-          <div class="nc-box ncc-inner-tabs_box">
-            <div id="w-node-_91152d65-9700-f60c-e33b-ae5e232d8789-48d532fa" class="c-wrap ncc-gap_1-5">
-              <div class="c-wrap cc-gap_0">
-                <div class="nc-tag">Unit21 AI Agents</div>
-                <h2 class="nc-text_xl-2 cc-300 cc-text_cream">Agents that investigate, decide, and file — without waiting for instructions</h2>
-              </div>
-              <p class="nc-paragraph_m cc-text_cream cc-width_75">Unit21's AI agents run the full investigation loop. They analyze signals, collect evidence, assess risk, draft narratives, and escalate — or close — cases. They learn from every outcome and improve detection accuracy over time.</p>
-            </div>
-            <div class="nc-2x1 ncc-gap_13 ncc-left_085">
-              <div id="w-node-_91152d65-9700-f60c-e33b-ae5e232d8792-48d532fa" class="c-wrap ncc-gap_0">
-                <div data-delay="0" data-hover="false" id="ai-trigger-1" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Detection Agent — catches what rules miss</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list">
-                    <div class="c-wrap ncc-pt_1-5">
-                      <div class="w-layout-vflex c-wrap cc-gap_1-5">
-                        <div class="w-layout-vflex c-wrap">
-                          <div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Detection that gets sharper with every alert</div>
-                          <div class="nc-tag ncc-s ncc-text_cream">Analyzes transactions, behavioral patterns, and entity signals in real-time. Continuously updates its logic based on analyst feedback and case outcomes. False positives drop. True positive rate climbs. No manual rule updates required.</div>
-                        </div>
-                        <a href="/products/ai-agent" class="nc-button w-inline-block"><div class="c-button_text">See Detection Agent</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="ai-trigger-2" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Investigation Agent — closes cases, not just tickets</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list">
-                    <div class="c-wrap ncc-pt_1-5">
-                      <div class="w-layout-vflex c-wrap cc-gap_1-5">
-                        <div class="w-layout-vflex c-wrap">
-                          <div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">From alert to decision in minutes, not days</div>
-                          <div class="nc-tag ncc-s ncc-text_cream">The Investigation Agent maps linked entities, pulls transaction history, assesses risk severity, and writes a complete case narrative — before your analyst opens the ticket. Investigators arrive to a pre-built case. They review, approve, or redirect. That's it.</div>
-                        </div>
-                        <a href="/products/ai-agent" class="nc-button w-inline-block"><div class="c-button_text">See Investigation Agent</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-              <div id="w-node-_6882dc54-fe6f-49b0-07a5-d6152cc26a81-48d532fa" class="c-wrap">
-                <img id="ai-img-1" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69af13b811b5e9a0c4eabf6a_ai-for-detection.avif" class="nc-img ncc-contain ncc-top w-node-_91152d65-9700-f60c-e33b-ae5e232d87d7-48d532fa"/>
-                <img id="ai-img-2" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69af13b82c61b29050cfaf14_ai-for-investigation.avif" class="nc-img ncc-contain ncc-top cc-none w-node-_4c56b53d-7d6a-dca8-828b-9ab5614af0ba-48d532fa"/>
-              </div>
-            </div>
-          </div>
-          <div class="nc-tab_bottom_content">
-            <div class="c-tab_left_content"><div class="w-layout-vflex c-wrap cc-gap_1-5"><img loading="lazy" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/68598fc3e72d62dadf5fcc1c_greendot.webp" alt="Green Dot" class="c-image cc-product_tab-logo"/></div></div>
-            <div class="c-line c-red-line-2 mobile"></div><div class="c-line cc-vertical cc-red_500 desktop"></div>
-            <div class="c-wrap cc-gap_05">
-              <p class="nc-text_xs cc-font_spacemono cc-text_black-500">"We're using AI Agent for L1 alert triage. Analysts spend time on true risk, not noise." — VP BSA/AML Operations, Green Dot</p>
-              <a href="/customers/greendot" class="nc-link ncc-hover_dark ncc-s w-inline-block"><div>Read the full story</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FRAUD TAB -->
-      <div id="fraud-target" class="nc-automate_tab_content ncc-none">
-        <div class="nc-tab_wrap">
-          <div class="nc-box ncc-inner-tabs_box">
-            <div id="w-node-_8e527763-78d1-8f88-5440-a6b1d44bcee2-48d532fa" class="c-wrap ncc-gap_1-5">
-              <div class="c-wrap cc-gap_0">
-                <div class="nc-tag">Fraud Prevention</div>
-                <h2 class="nc-text_xl-2 cc-300 cc-text_cream">Block fraud before it settles. Approve good customers in milliseconds.</h2>
-              </div>
-              <p class="nc-paragraph_m cc-text_cream cc-width_80">Stop losing revenue to fraud AND to false declines. Unit21 combines real-time blocking, device risk scoring, and a 80M+ person consortium to catch criminals — while keeping your best customers frictionless.</p>
-            </div>
-            <div class="nc-2x1 ncc-gap_13 ncc-left_085">
-              <div id="w-node-_8e527763-78d1-8f88-5440-a6b1d44bceeb-48d532fa" class="c-wrap ncc-gap_0">
-                <div data-delay="0" data-hover="false" id="monitoring-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Real-Time Monitoring — sub-250ms interdiction</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list">
-                    <div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Decide before funds move.</div><div class="nc-tag ncc-s ncc-text_cream">Block fraud across RTP, FedNow, ACH, cards, crypto, and wire — in under 250ms. Velocity rules, behavioral models, and graph analysis all fire simultaneously. If it's suspicious, it stops. If it's legitimate, it approves instantly.</div></div><a href="/products/real-time-payment-fraud-prevention" class="nc-button w-inline-block"><div class="c-button_text">See Real-Time Monitoring</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div>
-                  </nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="device-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Device Intelligence — one score, total device context</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list">
-                    <div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Know who's on the other end of every session.</div><div class="nc-tag ncc-s ncc-text_cream">A unified Device Risk Score surfaces rooted devices, VPNs, emulators, and tampered browsers instantly. Legitimate customers get frictionless access. Bot networks, account farms, and mule operations get flagged before they scale.</div></div><a href="/products/device-intelligence" class="nc-button w-inline-block"><div class="c-button_text">See Device Intelligence</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div>
-                  </nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="fraud-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Fraud Consortium — 80M+ adults. One shared intelligence network.</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list">
-                    <div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Catch fraud your institution has never seen before.</div><div class="nc-tag ncc-s ncc-text_cream">Tap into cross-platform fraud signals covering nearly one-third of all US adults. See investigation outcomes, first-party fraud patterns, and mule network activity from across the Unit21 customer base. Bad actors that already hit another institution don't get a second shot at yours.</div></div><a href="/products/fraud-consortium" class="nc-button w-inline-block"><div class="c-button_text">See Fraud Consortium</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div>
-                  </nav>
-                </div>
-              </div>
-              <div id="w-node-_7986db26-4b19-4ed8-f597-ba47b1a9a7c1-48d532fa" class="c-wrap">
-                <img id="monitoring-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69acb98074c7143415cda4c5_real-time-monitoring.avif" class="nc-img ncc-contain ncc-top w-node-_7986db26-4b19-4ed8-f597-ba47b1a9a7c2-48d532fa"/>
-                <img id="device-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69acb99d64c111bc17c2c745_device-intelligence.avif" class="nc-img ncc-contain ncc-top cc-none w-node-_7986db26-4b19-4ed8-f597-ba47b1a9a7c3-48d532fa"/>
-                <img id="fraud-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69acb9d70421ab7969c64d90_consortium.avif" class="nc-img ncc-contain ncc-top cc-none w-node-_77811db3-a878-38af-eb40-81c199f45f89-48d532fa"/>
-              </div>
-            </div>
-          </div>
-          <div class="nc-tab_bottom_content">
-            <div class="c-tab_left_content"><div class="w-layout-vflex c-wrap cc-gap_1-5"><img loading="lazy" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69afc75a187e12833e407a6f_69ab6ee2c78293f9a32aef2e_kinecta.svg" alt="Kinecta" class="c-image cc-product_tab-logo"/></div></div>
-            <div class="c-line c-red-line-2 mobile"></div><div class="c-line cc-vertical cc-red_500 desktop"></div>
-            <div class="c-wrap cc-gap_05">
-              <p class="nc-text_xs cc-font_spacemono cc-text_black-500">50% fewer false positives. Catching 2x the fraud. Same team size. — Kinecta Federal Credit Union</p>
-              <a href="/customers/kinecta-federal-credit-union" class="nc-link ncc-hover_dark ncc-s w-inline-block"><div>Read the full story</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AML TAB -->
-      <div id="aml-target" class="nc-automate_tab_content ncc-none">
-        <div class="nc-tab_wrap">
-          <div class="nc-box ncc-inner-tabs_box">
-            <div id="w-node-d73c2b7b-1564-5700-05f9-e6efb8899736-48d532fa" class="c-wrap ncc-gap_1-5">
-              <div class="c-wrap cc-gap_0">
-                <div class="nc-tag">AML Compliance</div>
-                <h2 class="nc-text_xl-2 cc-300 cc-text_cream">Run your full AML program. Without growing your compliance team.</h2>
-              </div>
-              <p class="nc-paragraph_m cc-text_cream cc-width_80">From transaction monitoring and case management to regulatory filing — Unit21 automates every stage of AML operations. Your compliance team handles exceptions and decisions. The AI handles everything else.</p>
-            </div>
-            <div class="nc-2x1 ncc-gap_13 ncc-left_085">
-              <div id="w-node-d73c2b7b-1564-5700-05f9-e6efb889973f-48d532fa" class="c-wrap ncc-gap_0">
-                <div data-delay="0" data-hover="false" id="transaction-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Transaction Monitoring — focus on real risk, not alert volume</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list"><div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Surface real risk. Suppress the noise.</div><div class="nc-tag ncc-s ncc-text_cream">Configurable rules, behavioral models, and adaptive AI scoring work together to prioritize the alerts that actually matter. The highest-risk activity rises to the top automatically. Analysts investigate threats — not 400 false positives a day.</div></div><a href="/products/aml-transaction-monitoring" class="nc-button w-inline-block"><div class="c-button_text">Explore Transaction Monitoring</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div></nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="case-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Case Management — investigations your team doesn't have to build</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list"><div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Cases pre-built. Narratives pre-written. Just review and decide.</div><div class="nc-tag ncc-s ncc-text_cream">AI agents gather all evidence, connect related entities across thousands of data points, and write the investigation narrative. Configurable workflows carry the case from alert to SAR without manual handoffs. Your analysts arrive to work that's already done.</div></div><a href="/products/case-management" class="nc-button w-inline-block"><div class="c-button_text">Explore Case Management</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div></nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="payment-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Payment Screening — faster payments, fewer blocked transactions</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list"><div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Screen payments without slowing them down.</div><div class="nc-tag ncc-s ncc-text_cream">AI-powered screening reduces false holds on legitimate transactions while catching sanctions violations before payments clear. Configurable matching logic and audit logs built for examiners.</div></div><a href="/products/real-time-payment-screening" class="nc-button w-inline-block"><div class="c-button_text">Explore Payment Screening</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div></nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="sanction-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Sanctions Screening — OFAC, PEP, adverse media. All covered.</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list"><div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Match with confidence. Audit with zero prep.</div><div class="nc-tag ncc-s ncc-text_cream">Screen against global sanctions lists with configurable match thresholds and transparent scoring. Continuous monitoring means you don't miss changes. Every screen is logged with full reasoning — ready for any examiner request.</div></div><a href="/products/sanction-screening-and-monitoring" class="nc-button w-inline-block"><div class="c-button_text">Explore Sanctions Screening</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div></nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="customer-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Customer Risk Rating — risk scores that update in real time</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list"><div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Risk profiles that reflect what's happening now, not 12 months ago.</div><div class="nc-tag ncc-s ncc-text_cream">Automatically updates customer risk scores based on current transaction behavior, device signals, network associations, and sanctions exposure. Triggers EDD workflows when scores change. No manual refresh cycles.</div></div><a href="/products/customer-risk-rating" class="nc-button w-inline-block"><div class="c-button_text">Explore Customer Risk Rating</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div></nav>
-                </div>
-                <div data-delay="0" data-hover="false" id="regulatory-trigger" class="nc-automate_dropdown w-dropdown">
-                  <div class="nc-faq_toggle ncc-pt_1-5 w-dropdown-toggle">
-                    <div class="nc-paragraph_m cc-300">Regulatory Filing — SARs written and filed in minutes</div>
-                    <div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77208 7.66521L13.6902 1.77913C13.7883 1.68245 13.8663 1.56743 13.9194 1.44071C13.9726 1.31398 14 1.17805 14 1.04077C14 0.903483 13.9726 0.767556 13.9194 0.64083C13.8663 0.514103 13.7883 0.399084 13.6902 0.302408C13.4939 0.108717 13.2284 9.20082e-09 12.9517 1.25007e-08C12.675 1.58006e-08 12.4095 0.108717 12.2133 0.302408L6.97601 5.45013L1.79114 0.302408C1.59489 0.108717 1.32941 1.51095e-07 1.05269 1.54395e-07C0.775965 1.57695e-07 0.510487 0.108717 0.314234 0.302408C0.215262 0.398722 0.136525 0.513578 0.082585 0.640322C0.0286449 0.767065 0.000575113 0.903176 -1.97104e-07 1.04077C0.000575116 1.17836 0.0286449 1.31447 0.082585 1.44121C0.136525 1.56796 0.215262 1.68281 0.314234 1.77913L6.23232 7.66521C6.33041 7.77077 6.44945 7.85501 6.58196 7.91263C6.71446 7.97025 6.85755 8 7.0022 8C7.14685 8 7.28994 7.97025 7.42244 7.91263C7.55495 7.85501 7.67399 7.77077 7.77208 7.66521V7.66521Z" fill="currentcolor"/></svg></div>
-                  </div>
-                  <nav class="nc-faq_content w-dropdown-list"><div class="c-wrap ncc-pt_1-5"><div class="w-layout-vflex c-wrap cc-gap_1-5"><div class="w-layout-vflex c-wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">Filing used to take 2 hours per SAR. Now it takes minutes.</div><div class="nc-tag ncc-s ncc-text_cream">AI pre-populates SARs, CTRs, STRs, 314(a), and goAML filings with evidence, activity timelines, and policy references from the case record. Every filing ships with a complete, examiner-ready audit trail. No more copy-paste from case notes.</div></div><a href="/products/regulatory-filing" class="nc-button w-inline-block"><div class="c-button_text">Explore Regulatory Filing</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a></div></div></nav>
-                </div>
-              </div>
-              <div id="w-node-c48358e3-9136-32e1-f319-33eee27410b5-48d532fa" class="c-wrap">
-                <img id="transaction-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69af1441463eab1dc205a771_transaction-monitoring.avif" class="nc-img ncc-contain ncc-top w-node-c48358e3-9136-32e1-f319-33eee27410b6-48d532fa"/>
-                <img id="case-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69acba4623f70422fa1f58a6_case-management.avif" class="nc-img ncc-contain ncc-top cc-none w-node-c48358e3-9136-32e1-f319-33eee27410b7-48d532fa"/>
-                <img id="payment-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69acb9bb914ad772c5d9bf51_payment-screening.avif" class="nc-img ncc-contain ncc-top cc-none w-node-c48358e3-9136-32e1-f319-33eee27410b8-48d532fa"/>
-                <img id="sanction-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69af27dbfb1a14989bdd26d3_watchlist-screening.avif" class="nc-img ncc-contain ncc-top cc-none w-node-c48358e3-9136-32e1-f319-33eee27410b9-48d532fa"/>
-                <img id="customer-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69acbaf3020ff992546e1a8f_customer-risk-ratings.avif" class="nc-img ncc-contain ncc-top cc-none w-node-baee446e-fc3b-3142-f31c-0ec2bb2d5df4-48d532fa"/>
-                <img id="regulatory-img" loading="lazy" alt="" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69af143e3e2a68876f584662_regulatory-filing-2-autopopulate.avif" class="nc-img ncc-contain ncc-top cc-none w-node-fae6c84b-d00a-e855-52e6-d001c4bceb48-48d532fa"/>
-              </div>
-            </div>
-          </div>
-          <div class="nc-tab_bottom_content">
-            <div class="c-tab_left_content"><div class="w-layout-vflex c-wrap cc-gap_1-5"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/691650728636dcdbfc3d352d_nexo-black-p-500.webp 500w, https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/691650728636dcdbfc3d352d_nexo-black.webp 2800w" alt="Nexo" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/691650728636dcdbfc3d352d_nexo-black.webp" loading="lazy" class="c-image cc-product_tab-logo"/></div></div>
-            <div class="c-line c-red-line-2 mobile"></div><div class="c-line cc-vertical cc-red_500 desktop"></div>
-            <div class="c-wrap cc-gap_05">
-              <p class="nc-text_xs cc-font_spacemono cc-text_black-500">57% of alerts now handled by AI. False positives down 93%. — Nexo</p>
-              <a href="/customers/nexo" class="nc-link ncc-hover_dark ncc-s w-inline-block"><div>Read the full story</div><div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img loading="lazy" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697bf168e32a36d2f28da94d_circlebg2.avif" alt="" class="nc-circle-bg ncc-1"/>
-</section>
-
-<!-- ============================================================ -->
-<!-- CUSTOMER IMPACT — REWRITTEN -->
-<!-- ============================================================ -->
-<section class="c-section">
-  <div class="nc-container cc-z_1 ncc-pb_9">
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850ae24-48d532fa" class="c-wrap cc-gap_0">
-      <div class="nc-tag-2">Verified customer results</div>
-      <h2 class="nc-text_xl ncc-baskervville-title cc-text_cream cc-width_80">The numbers your board <span class="ncc-title-underline">actually wants</span> to see — <span class="ncc-title-mark_large">achieved</span></h2>
-    </div>
-    <div data-delay="10000" data-animation="slide" class="nc-customers-slider-2 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true" id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850aed0-48d532fa">
-      <div class="nc-customers-slider_mask w-slider-mask">
-        <div class="w-slide">
-          <div class="c-2x1 cc-customers">
-            <div class="w-dyn-list"><div role="list" class="c-wrap cc-height_100 cc-width_100 w-dyn-items"><div role="listitem" class="cc-height_100 w-dyn-item"><a href="/customers/greendot" class="nc-card ncc-gap_2 cc-bg_golden w-inline-block"><div class="c-wrap cc-gap_24"><div class="nc-text_m cc-300 cc-text_black-500 ncc-indent">"We're using Unit21's AI Agent where it moves the needle most — L1 alert triage. It's not about cutting jobs; it's about scaling responsibly so analysts spend time on true risk, not noise."</div><div class="c-wrap cc-gap_0"><div class="nc-tag ncc-text_black-500 cc-700">Kevin Newman</div><div class="nc-tag ncc-text_black-500">VP BSA/AML Operations, Green Dot</div></div></div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end cc-mobile_lands-vertical"><img alt="Green Dot" loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3c640159834461b89a3a_greendot.webp" class="c-logo ncc-customer-impact cc-greendot"/><div class="c-wrap cc-align_end cc-gap_20 cc-mobile_lands-align_start"><div class="nc-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div><div class="w-layout-vflex nc-testimonial_image"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3a1b9de7b54cdf381ec3_ia1.png" alt="Kevin Newman, VP BSA/AML Operations at Green Dot" sizes="100vw" srcset="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3a1b9de7b54cdf381ec3_ia1-p-500.png 500w, https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3a1b9de7b54cdf381ec3_ia1.png 1380w" class="c-image ncc-rounded-border"/></div></div></div></a></div></div></div>
-            <div class="cc-height_100 w-dyn-list"><div role="list" class="c-2x1 cc-customers-2x2 cc-height_100 w-dyn-items">
-              <div role="listitem" class="cc-height_100 w-dyn-item"><a data-w-id="d5e5b79f-c8bb-4f8f-e9cd-ce6ac9a80ead" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform-style:preserve-3d" href="/customers/underdog-fantasy" class="nc-card-wrapper w-inline-block"><div class="nc-card ncc-customers cc-justify_end ncc-is-front"><img src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3bf50159834461b890cb_ia2.png" loading="lazy" alt="72% fewer alerts with AI agents" sizes="100vw" srcset="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3bf50159834461b890cb_ia2-p-500.png 500w, https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3bf50159834461b890cb_ia2.png 1380w" class="nc-card_bg ncc-filter_grayscale"/></div><div class="nc-card ncc-customers ncc-bg_cream ncc-is-back"><div class="nc-text_m cc-300 cc-text_black-500">Alert volume cut 72% with AI agents — same team, higher accuracy</div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3bf97cf5069090639b9f_underdog.webp" alt="Underdog Fantasy" class="c-logo ncc-customer-impact cc-service ncc-width_70"/><div class="c-wrap cc-align_end cc-gap_20"><div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div></a></div>
-              <div role="listitem" class="cc-height_100 w-dyn-item"><a data-w-id="d5e5b79f-c8bb-4f8f-e9cd-ce6ac9a80ea0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform-style:preserve-3d" href="/customers/uphold" class="nc-card-wrapper w-inline-block"><div style="background-color:#15be74" class="nc-card ncc-customers ncc-bg_aqua ncc-is-front"><div class="nc-text_m cc-300 cc-text_black-500">Case review 44% faster — alerts, cases, and filings in one place</div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3b0e0a96ad0dbf5a2eec_uphold.svg" alt="Uphold" class="c-logo ncc-customer-impact cc-service"/><div class="c-wrap cc-align_end cc-gap_20"><div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div><div style="background-color:#15be74" class="nc-card ncc-customers ncc-bg_aqua ncc-is-back"><div class="nc-text_m cc-300 cc-text_black-500">Audit prep: from nearly a week to under 30 minutes</div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69aa3b0e0a96ad0dbf5a2eec_uphold.svg" alt="Uphold" class="c-logo ncc-customer-impact cc-service"/><div class="c-wrap cc-align_end cc-gap_20"><div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div></a></div>
-              <div role="listitem" class="cc-height_100 w-dyn-item"><a data-w-id="d5e5b79f-c8bb-4f8f-e9cd-ce6ac9a80ea0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform-style:preserve-3d" href="/customers/nexo" class="nc-card-wrapper w-inline-block"><div style="background-color:#46daff" class="nc-card ncc-customers ncc-bg_aqua ncc-is-front"><div class="nc-text_m cc-300 cc-text_black-500">57% of alert reviews handled by AI — zero additional headcount</div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69ab9266278770785e48b49e_nexo.svg" alt="Nexo" class="c-logo ncc-customer-impact cc-service"/><div class="c-wrap cc-align_end cc-gap_20"><div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div><div style="background-color:#46daff" class="nc-card ncc-customers ncc-bg_aqua ncc-is-back"><div class="nc-text_m cc-300 cc-text_black-500">False positive rate dropped 93%</div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69ab9266278770785e48b49e_nexo.svg" alt="Nexo" class="c-logo ncc-customer-impact cc-service"/><div class="c-wrap cc-align_end cc-gap_20"><div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div></a></div>
-              <div role="listitem" class="cc-height_100 w-dyn-item"><a data-w-id="d5e5b79f-c8bb-4f8f-e9cd-ce6ac9a80ead" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0deg) rotateZ(0) skew(0, 0);transform-style:preserve-3d" href="/customers/kinecta-federal-credit-union" class="nc-card-wrapper w-inline-block"><div class="nc-card ncc-customers cc-justify_end ncc-is-front"><img src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69ab6edf4e81c4eb18917e0e_rotate-card-photo1.png" loading="lazy" alt="50% fewer false positives, 2x fraud caught" sizes="100vw" srcset="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69ab6edf4e81c4eb18917e0e_rotate-card-photo1-p-500.png 500w, https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69ab6edf4e81c4eb18917e0e_rotate-card-photo1.png 1380w" class="nc-card_bg ncc-filter_grayscale"/></div><div class="nc-card ncc-customers ncc-bg_cream ncc-is-back"><div class="nc-text_m cc-300 cc-text_black-500">50% fewer false positives. Catching 2x the fraud. — Kinecta</div><div class="c-wrap cc-width_100 cc-horizontal cc-justify_between cc-align_end"><img loading="lazy" src="https://cdn.prod.website-files.com/61ead44637176294fdd344ff/69ab6ee2c78293f9a32aef2e_kinecta.svg" alt="Kinecta" class="c-logo ncc-customer-impact cc-service ncc-width_70"/><div class="c-wrap cc-align_end cc-gap_20"><div class="c-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L22 1M22 1V21.1429M22 1L1 22" stroke="black" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div></a></div>
-            </div></div>
-          </div>
-        </div>
-      </div>
-      <div class="cc-none w-slider-arrow-left"></div><div class="cc-none w-slider-arrow-right"></div>
-    </div>
-    <div class="css w-embed"><style>.nc-customers-slider_nav{ display: flex; gap: 15px; margin: 0 auto; justify-content: center; } .w-slider-dot{ margin: 0; background-color: transparent; border: 1px solid #FF6158; width: 12px; height: 12px; } .w-slider-dot.w-active{ background-color: #FF6158; }</style></div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- METRICS — REWRITTEN -->
-<!-- ============================================================ -->
-<section class="c-section ncc-home-metrics">
-  <div class="nc-container ncc-gap_7 cc-z_1">
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af44-48d532fa" class="c-wrap cc-gap_0">
-      <div class="nc-tag">Scale that proves it works</div>
-      <h2 class="nc-text_xl ncc-baskervville-title cc-text_cream">The numbers behind the only platform<br/>that handles this much financial crime.</h2>
-    </div>
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af4b-48d532fa" class="c-3x1 ncc-counter">
-      <div class="custom-css w-embed w-script"><script>
-document.addEventListener("DOMContentLoaded", function () {
-  const counters = document.querySelectorAll(".counter");
-  const options = { threshold: 0.4 };
-  const startIncrement = (el) => {
-    let current = parseInt(el.getAttribute("data-target")) || 48299536;
-    const render = () => { el.textContent = current.toLocaleString("en-US", { minimumIntegerDigits: 8, useGrouping: true }); };
-    render();
-    const increment = () => { current += 1; render(); };
-    setTimeout(() => { setInterval(increment, 8000); }, 2000);
-  };
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry) => { if (entry.isIntersecting) { startIncrement(entry.target); obs.unobserve(entry.target); } });
-  }, options);
-  counters.forEach((counter) => observer.observe(counter));
-});
-      </script></div>
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af4d-48d532fa" class="nc-card ncc-counter">
-        <img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69ba5b8eda6ec23530ff0094_Asset%20513%201.png" loading="lazy" alt="" class="nc-icon cc-l"/>
-        <div class="c-wrap cc-gap_0">
-          <p class="nc-counter counter">48,299,536</p>
-          <div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">analyst hours recovered</div>
-        </div>
-      </div>
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af55-48d532fa" class="nc-card ncc-counter">
-        <img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69ba5b8972bfc08636da5ed9_Asset%20530%201.png" loading="lazy" alt="" class="nc-icon cc-l"/>
-        <div class="c-wrap cc-gap_0">
-          <div class="nc-counter">4.5B</div>
-          <div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">events monitored monthly</div>
-        </div>
-      </div>
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af5a-48d532fa" class="nc-card ncc-counter">
-        <img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69ba5b89c0b502b51fa6744e_Asset%20515%201.png" loading="lazy" alt="" class="nc-icon cc-l"/>
-        <div class="c-wrap cc-gap_0">
-          <div class="nc-counter">5%</div>
-          <div class="nc-paragraph_xl cc-font_bastervville cc-text_cream">of all US SARs filed through Unit21</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img loading="lazy" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697bf16b625c590169fd6629_circlebg1.avif" alt="" class="nc-circle-bg ncc-2"/>
-</section>
-
-<!-- ============================================================ -->
-<!-- INTEGRATIONS — REWRITTEN -->
-<!-- ============================================================ -->
-<section class="c-section cc-orange_gradient-copy">
-  <div class="nc-container cc-z_1">
-    <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af65-48d532fa" class="c-2x1 cc-left_075">
-      <div id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af66-48d532fa" class="c-wrap cc-gap_2 cc-width_90 cc-mobile_lands-center">
-        <div class="c-wrap cc-mobile_lands-center cc-gap_0">
-          <div class="nc-tag">Zero rip-and-replace</div>
-          <h2 class="nc-text_xl cc-300 cc-text_cream">Works with your existing stack. No infrastructure rebuild required.</h2>
-        </div>
-        <p class="nc-paragraph_m cc-text_cream">Unit21 connects to any database, data warehouse, or core banking system. Most customers are live in weeks, not months. You don't need to migrate anything — you just point Unit21 at your data and let it run.</p>
-        <a href="/integrations" class="nc-button ncc-transparent w-inline-block">
-          <div class="c-button_text">See All Integrations</div>
-          <div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div>
-        </a>
-      </div>
-      <img id="w-node-_4ca52099-c3e0-5480-58e4-2a2aa850af70-48d532fa" loading="eager" alt="Unit21 connects to MySQL, MongoDB, BigQuery, AWS, Snowflake, and Databricks." src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69af2fe76c22dd954953cffc_integrations-home.svg" class="nc-img ncc-contain"/>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- FINAL CTA — REWRITTEN -->
-<!-- ============================================================ -->
-<section class="c-section ncc-cta">
-  <div class="nc-container ncc-ptb_150px cc-z_2">
-    <div id="w-node-_251b4916-9fc6-06bc-cd63-bfa1f517c9cf-f517c9cd" class="c-wrap cc-align_center cc-gap_2">
-      <div class="w-layout-vflex c-wrap cc-align_center cc-gap_24">
-        <div class="c-wrap cc-align_center cc-gap_0">
-          <div class="nc-tag">Free. No commitment. 15 minutes.</div>
-          <h2 class="nc-text_xl ncc-baskervville-title cc-text_cream cc-width_60">See exactly what Unit21 would do with your alerts — live.</h2>
-        </div>
-        <div class="nc-tag cc-text_cream">Book a 15-minute demo. Bring your biggest workflow problem. We'll show you how the AI handles it — on a real case, not a slide deck.</div>
-      </div>
-      <a href="/schedule-demo" class="nc-button w-inline-block">
-        <div class="c-button_text">Book My Free Demo Session</div>
-        <div class="c-icon cc-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.85352H9M9 4.85352L4.5 0.353516M9 4.85352L4.5 9.35352" stroke="currentColor"/></svg></div>
+    <h1 class="hero-headline">
+      Meet real people<br>on <em>iMessage.</em>
+    </h1>
+    <p class="hero-sub">
+      Series matches you with <strong>like-minded people</strong> and connects you directly in iMessage — no algorithm, no feed, no performance. Just real conversations.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-hero">
+        Start Connecting Free
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#how" class="btn-hero-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+        See how it works
       </a>
     </div>
+    <div class="hero-social-proof">
+      <div class="avatars">
+        <div class="avatar avatar-a">A</div>
+        <div class="avatar avatar-b">J</div>
+        <div class="avatar avatar-c">M</div>
+        <div class="avatar avatar-d">R</div>
+        <div class="avatar avatar-e">K</div>
+      </div>
+      <p class="social-proof-text"><strong>12,400+</strong> people made real connections this week</p>
+    </div>
   </div>
-  <div class="nc-cta-bg_overlay"></div>
-  <div data-poster-url="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70%2F697ae4b0232c03adaf755c57_cta%20bg_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70%2F697ae4b0232c03adaf755c57_cta%20bg_mp4.mp4,https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70%2F697ae4b0232c03adaf755c57_cta%20bg_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="nc-bg-video ncc-cta w-background-video w-background-video-atom"><video id="251b4916-9fc6-06bc-cd63-bfa1f517c9de-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70%2F697ae4b0232c03adaf755c57_cta%20bg_poster.0000000.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70%2F697ae4b0232c03adaf755c57_cta%20bg_mp4.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70%2F697ae4b0232c03adaf755c57_cta%20bg_webm.webm" data-wf-ignore="true"/></video></div>
+
+  <div class="hero-visual">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="chat-header">
+          <div class="chat-avatar"></div>
+          <div>
+            <div class="chat-name">Alex from Series</div>
+            <div class="chat-status">● Matched with you</div>
+          </div>
+        </div>
+        <div class="chat-messages">
+          <div class="msg in" style="animation-delay:0.2s">
+            <div class="bubble">Hey! Series matched us — I'm into indie games and stoicism 🎮</div>
+            <div class="msg-time">2:14 PM</div>
+          </div>
+          <div class="msg out" style="animation-delay:0.5s">
+            <div class="bubble">No way! I just finished reading Marcus Aurelius. What are you building?</div>
+            <div class="msg-time">2:15 PM</div>
+          </div>
+          <div class="msg in" style="animation-delay:0.8s">
+            <div class="bubble">A puzzle game about decision trees. Would love your thoughts on the design!</div>
+            <div class="msg-time">2:16 PM</div>
+          </div>
+          <div class="msg out" style="animation-delay:1.1s">
+            <div class="bubble">This is exactly the kind of convo I was hoping for </div>
+            <div class="msg-time">2:17 PM</div>
+          </div>
+        </div>
+        <div class="chat-input">
+          <div class="chat-input-text">iMessage</div>
+          <div class="chat-input-send">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="float-card float-card-1">
+      <div>
+        <div class="float-label">Match quality</div>
+        <div class="float-value">94% interest overlap</div>
+      </div>
+    </div>
+
+    <div class="float-card float-card-2">
+      <div>
+        <div class="float-label">Connections today</div>
+        <div class="float-value">3,200+ new chats</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- FOOTER — REWRITTEN COPY ONLY -->
-<!-- ============================================================ -->
-<footer class="nc-footer"><div class="w-layout-blockcontainer nc-container ncc-footer w-container"><div id="w-node-_2c41e094-a0ef-83d2-6770-22790d4902a7-0d4902a5" class="w-layout-hflex nc-footer-form_wrap"><div class="nc-paragraph_xl cc-font_bastervville cc-text_cream ncc-footer-newsletter-title">The <span class="ncc-title-mark">only</span> platform that runs your full <span class="ncc-underline">financial crime operation</span> — detection, investigation, and filing — with AI.</div><div id="w-node-_407d0cf2-24b1-02fd-2a3e-f1d68caad5ed-0d4902a5" class="c-wrap cc-width_100 cc-gap_05"><div class="c-wrap cc-width_100 cc-align_end"><div class="nc-text_xs cc-300 cc-text_cream">Risk intelligence, weekly. No spam.</div></div><div class="nc-wrap cc-width_100"><div data-wf-hs-form-portal-id="7389031" data-wf-hs-form-type="iframe" data-wf-hs-form-id="24cf4bdb-afc8-4cfe-a380-218f31b587eb" class="c-wrap cc-width_100 cc-mb_0 cc-gap_0 w-embed w-script"><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script><script>hbspt.forms.create({ portalId: "7389031", formId: "eda685c4-a259-4a31-8edd-4dceccf83110", region: "na1" });</script></div><div class="custom-css w-embed"><style>[id='hsForm_eda685c4-a259-4a31-8edd-4dceccf83110'] .hs-input { height: 100% !important; margin-bottom: 0px !important; padding: 0.7em 0.8em !important; background-color: transparent !important; font-family: "Space Mono" !important; color: var(--red-links) !important; font-size: 1.08em !important; line-height: 1.55 !important; border-style: solid !important; border-width: 1px !important; border-top-color: var(--red-links) !important; border-right-color: var(--red-links) !important; border-bottom-color: var(--red-links) !important; border-left-color: var(--red-links) !important; border-radius: 5px !important; } .hs-input::placeholder { color: var(--red-links) !important; } .hs-input:focus { outline: none !important; } #hsForm_eda685c4-a259-4a31-8edd-4dceccf83110 { display: flex !important; flex-direction: column !important; grid-row-gap: 0em !important; position: relative !important; } [id='hsForm_eda685c4-a259-4a31-8edd-4dceccf83110'] .hs-button { padding: 0.65em 1.42em !important; border-style: solid !important; border-width: 1px !important; border-top-color: var(--red-links) !important; border-right-color: var(--red-links) !important; border-bottom-color: var(--red-links) !important; border-left-color: var(--red-links) !important; border-radius: 5px !important; background-color: var(--red-links) !important; transition-property: all !important; transition-duration: 200ms !important; transition-timing-function: ease !important; font-family: "Space Mono" !important; color: var(--_design-system---black-500) !important; font-size: 1.08em !important; line-height: 1.55 !important; text-transform: capitalize !important; font-weight: 400 !important; position: absolute !important; right: 0em !important; bottom: 0em !important; top: 0em !important; left: auto !important; } .submitted-message { color: #fff4ce; } label { display: none; } li { background-image: none; }</style></div></div></div></div>
-<div id="w-node-_2c41e094-a0ef-83d2-6770-22790d4902bd-0d4902a5" class="w-layout-hflex nc-footer-menu_wrap"><div class="c-wrap cc-gap_3"><div class="c-wrap cc-gap_50"><a href="/" aria-current="page" class="nc-footer-logo w-nav-brand w--current"><img loading="eager" src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/697a9d65c90dc06b81dd82ee_new-ui-logo.svg" alt="" class="nc-img ncc-radius_0"/></a><div class="w-layout-hflex c-wrap cc-horizontal cc-gap_15"><a href="https://twitter.com/unit21inc" class="nc-footer_social-link w-inline-block"><div class="nc-footer_social-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.0311208 0L5.05005 6.61953L0 12H1.13732L5.5593 7.2893L9.13253 12H13L7.69815 5.0093L12.3974 0H11.2601L7.1889 4.33954L3.89859 0H0.0311208ZM1.70316 0.826047H3.47987L11.3251 11.174H9.54842L1.70316 0.826047Z" fill="black"/></svg></div></a><a href="https://www.linkedin.com/company/unit21/" class="nc-footer_social-link w-inline-block"><div class="nc-footer_social-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.73399 11.5109H0.15158V3.74329H2.73399V11.5109ZM1.44371 2.68408H1.42707C0.560108 2.68408 0 2.087 0 1.34204C0 0.597078 0.576744 0 1.46035 0C2.34395 0 2.88742 0.580441 2.90405 1.34204C2.90405 2.087 2.34395 2.68408 1.44371 2.68408ZM12.0432 11.5109H9.46082V7.35534C9.46082 6.31091 9.08742 5.59922 8.15391 5.59922C7.44037 5.59922 7.01521 6.07984 6.8285 6.54383C6.76011 6.7102 6.74347 6.94126 6.74347 7.17418V11.5109H4.16106C4.16106 11.5109 4.19434 4.47162 4.16106 3.74329H6.74347V4.84317C7.0873 4.31449 7.69917 3.56029 9.07078 3.56029C10.7696 3.56029 12.0432 4.67126 12.0432 7.05587V11.509V11.5109Z" fill="black"/></svg></div></a></div></div><div class="c-wrap cc-gap_1-5"><div class="c-footer_badges"><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f31640360744340c3be9f6_g2-Anti-MoneyLaundering(AML)_Leader_Leader.png" loading="lazy" alt="" class="c-footer_badge"/><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f3164094ee98b39af0479c_g2-Governance%2CRisk%26Compliance_HighPerformer_HighPerformer.png" loading="lazy" alt="" class="c-footer_badge"/><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f316406d79ebb64bfabbe4_g2-FraudDetection_EasiestToDoBusinessWith_EaseOfDoingBusinessWith.png" loading="lazy" alt="" class="c-footer_badge"/><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f31640cdb560b574ede34e_g2-users-love-us%20copy.png" loading="lazy" alt="" class="c-footer_badge"/></div><div class="c-footer_badges"><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f3163e131e9c43f0a5d589_aicpa-soc.png" loading="lazy" alt="" class="c-footer_badge cc-2"/><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f3163ec59c1eb8425f7a9e_gdpr.png" loading="lazy" alt="" class="c-footer_badge cc-2"/><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f3163e6ca87b3f22fe8346_cobalt-doyensec.png" loading="lazy" alt="" class="c-footer_badge cc-2"/><img src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/69f3163edd1abe0b625ab9ab_armanino.png" loading="lazy" alt="" class="c-footer_badge cc-2"/></div></div></div>
-<div class="nc-footer-links-mega-wrap"><div><div class="c-wrap cc-gap_65"><div class="c-wrap cc-gap_15"><a href="/products/ai-agent" class="nc-nav_dropdown-link ncc-footer ncc-head w-inline-block"><h3 class="nc-paragraph_xl cc-font_bastervville cc-text_red-500">AI Risk Infrastructure</h3><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#FFF4CE" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/persona/fraud" class="nc-nav_dropdown-link ncc-footer ncc-subhead w-inline-block"><h2 class="nc-text_xs cc-font_spacemono cc-400">Fraud Prevention</h2><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#FF6158" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/real-time-payment-fraud-prevention" class="nc-footer-link">Real-Time Monitoring</a><a href="/products/device-intelligence" class="nc-footer-link">Device Intelligence</a><a href="/products/fraud-consortium" class="nc-footer-link">Consortium Intelligence</a></div><div class="c-wrap cc-gap_15"><a href="/persona/aml" class="nc-nav_dropdown-link ncc-footer ncc-subhead w-inline-block"><h2 class="nc-text_xs cc-font_spacemono cc-400">AML Compliance</h2><div class="nc-nav_dropdown-link_arrow w-embed"><svg width="100%" height="100%" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 6.23584H11.75M11.75 6.23584L6.25 0.75M11.75 6.23584L6.25 11.7219" stroke="#FF6158" stroke-width="1.5" stroke-linecap="round"/></svg></div></a><a href="/products/aml-transaction-monitoring" class="nc-footer-link">Transaction Monitoring</a><a href="/products/case-management" class="nc-footer-link">Case Management</a><a href="/products/real-time-payment-screening" class="nc-footer-link">Payment Screening</a><a href="/products/sanction-screening-and-monitoring" class="nc-footer-link">Sanctions Screening</a><a href="/products/customer-risk-rating" class="nc-footer-link">Customer Risk Rating</a><a href="/products/regulatory-filing" class="nc-footer-link">Regulatory Filing</a></div></div></div><div><div id="w-node-_2c41e094-a0ef-83d2-6770-22790d4902f5-0d4902a5" class="c-wrap cc-gap_15"><h3 class="nc-paragraph_xl cc-font_bastervville cc-text_red-500 cc-mb_0">Industries</h3><a href="/markets/fintech" class="nc-footer-link">Fintech</a><a href="/markets/crypto-web3-platforms" class="nc-footer-link">Crypto &amp; Web3</a><a href="/products/sponsor-bank-operating-system" class="nc-footer-link">Sponsor Banks</a><a href="/markets/financial-institutions" class="nc-footer-link">Banks &amp; Credit Unions</a></div></div><div class="c-wrap cc-gap_15"><h3 class="nc-paragraph_xl cc-font_bastervville cc-text_red-500 cc-mb_0">Resources</h3><a href="/integrations" class="nc-footer-link">Integrations</a><a href="https://docs.unit21.ai/password?redirect=/docs/overview" class="nc-footer-link">Documentation</a><a href="https://support.unit21.ai/hc/en-us" class="nc-footer-link">Support</a><a href="/customers" class="nc-footer-link">Customer Results</a><a href="/resource-center" class="nc-footer-link">Resource Library</a></div><div><div id="w-node-_2c41e094-a0ef-83d2-6770-22790d49032a-0d4902a5" class="c-wrap cc-gap_15"><h3 class="nc-paragraph_xl cc-font_bastervville cc-text_red-500 cc-mb_0">Company</h3><a href="/company/newsroom" class="nc-footer-link">Newsroom</a><a href="https://unit21.zohorecruit.com/jobs/Careers" class="nc-footer-link">Careers</a><a href="/resources/risk-compliance-blog" class="nc-footer-link">Blog</a><a href="/security" class="nc-footer-link">Security</a><a href="/contact-unit21" class="nc-footer-link">Contact Us</a></div></div></div></div>
-<div id="w-node-_2c41e094-a0ef-83d2-6770-22790d490343-0d4902a5" class="c-wrap cc-width_100 cc-align_end"><div class="c-wrap cc-horizontal cc-gap_25 cc-mobile-wrap"><div class="nc-footer-link_compliance">© 2026 Unit21, Inc. All rights reserved</div><a href="/privacy-policy" class="nc-footer-link_compliance">Privacy Policy</a><a href="/terms-of-use" class="nc-footer-link_compliance">Terms of Use</a><a href="/tos" class="nc-footer-link_compliance">Terms of Service</a></div></div></div>
-<div class="css w-embed"><style>.nc-footer-form_input::placeholder{ color: #FF6158; } .nc-nav_dropdown-link.ncc-footer.ncc-head .nc-paragraph_xl, .nc-nav_dropdown-link.ncc-footer.ncc-subhead .nc-text_xs{ position: relative; } .nc-nav_dropdown-link.ncc-footer.ncc-head .nc-paragraph_xl:after, .nc-nav_dropdown-link.ncc-footer.ncc-subhead .nc-text_xs:after{ transition: 0.4s; text-decoration: none !important; line-height: 1; content: ""; height: 1px; position: absolute !important; bottom: 0; left: 0; } .nc-nav_dropdown-link.ncc-footer.ncc-head .nc-paragraph_xl:after{ width: 0% !important; background-color: #FFF4CE !important; } .nc-nav_dropdown-link.ncc-footer.ncc-subhead .nc-text_xs:after{ width: 0% !important; background-color: #FF6158 !important; } .nc-nav_dropdown-link.ncc-footer.ncc-head:hover .nc-paragraph_xl:after, .nc-nav_dropdown-link.ncc-footer.ncc-subhead:hover .nc-text_xs:after{ width: 100%!important; }</style></div>
-</footer></div>
+<!-- LOGOS -->
+<div class="logos reveal">
+  <div class="logos-label">As featured in</div>
+  <div class="logos-row">
+    <span class="logo-item">Business Insider</span>
+    <span class="logo-item">Forbes</span>
+    <span class="logo-item">WSJ</span>
+    <span class="logo-item">Entrepreneur</span>
+    <span class="logo-item">Complex</span>
+  </div>
+</div>
 
-<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=61e589aa65b0300f0d3e0b70" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/js/unit-21.schunk.36b8fb49256177c8.js" type="text/javascript" integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G" crossorigin="anonymous"></script>
-<script src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/js/unit-21.schunk.91c5b692032e00e4.js" type="text/javascript" integrity="sha384-7RsoQE9eTCLMOgYGLei5lRpY5FkZcIkkDaa52P7CJLzPrDUNjeyg1odxQ++3VESi" crossorigin="anonymous"></script>
-<script src="https://cdn.prod.website-files.com/61e589aa65b0300f0d3e0b70/js/unit-21.55d55691.4f4f9d5cf0e13943.js" type="text/javascript" integrity="sha384-99+Y94IVx8YFXu0gQ+mGGEbnXYLYZP1SOZmlbUsz/5rStc4R4lQDrkw67v8VXW70" crossorigin="anonymous"></script>
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="reveal">
+    <div class="section-label">Why Series</div>
+    <h2 class="section-headline">Social media, finally<br>done right.</h2>
+    <p class="section-sub">We built Series because every other platform is optimized for attention — not connection. You deserve better.</p>
+  </div>
+  <div class="features-grid reveal">
+    <div class="feature-card">
+      <h3 class="feat-title">Interest-based matching</h3>
+      <p class="feat-desc">Our algorithm finds people who genuinely share your interests — not just anyone nearby or trending.</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="feat-title">No feed, just iMessage</h3>
+      <p class="feat-desc">Conversations happen in iMessage — the app you already trust. No new inbox to check, no notifications to ignore.</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="feat-title">Zero vanity metrics</h3>
+      <p class="feat-desc">No likes. No followers. No public profiles. Just two real people talking without performance pressure.</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="feat-title">Smart conversation starters</h3>
+      <p class="feat-desc">Series gives you shared context so the first message writes itself. No awkward openers.</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="feat-title">One match at a time</h3>
+      <p class="feat-desc">Quality over quantity. You get one meaningful match per day — not a swipe pile of randoms.</p>
+    </div>
+    <div class="feature-card">
+      <h3 class="feat-title">Global community</h3>
+      <p class="feat-desc">Connect with people across the world who think like you — not just in your city or social bubble.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="reveal">
+    <div class="section-label">How it works</div>
+    <h2 class="section-headline">Three steps to a<br>real conversation.</h2>
+  </div>
+  <div class="how-grid">
+    <div class="steps reveal">
+      <div class="step active">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3 class="step-title">Build your interest profile</h3>
+          <p class="step-desc">Tell Series what you're into — books, startups, music, sports, philosophy, whatever. Takes 60 seconds.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3 class="step-title">Get matched daily</h3>
+          <p class="step-desc">Every morning, Series finds your best match. One thoughtful person — not 50 noisy ones.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3 class="step-title">Chat in iMessage</h3>
+          <p class="step-desc">Accept the match and the conversation starts in your existing iMessage. Natural, private, and real.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3 class="step-title">Build your network</h3>
+          <p class="step-desc">Keep the people you vibe with. Your Series network grows organically — no follower counts, no algorithms.</p>
+        </div>
+      </div>
+    </div>
+    <div class="how-visual reveal">
+      <div class="how-visual-header">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span style="font-size:0.8rem; color: var(--muted); margin-left: 8px;">Today's Matches</span>
+      </div>
+      <div class="match-card">
+        <div class="profile-row">
+          <div class="profile-pic p1"></div>
+          <div class="profile-info">
+            <div class="profile-name">Jordan M.</div>
+            <div class="profile-tag">Philosophy · Startups · Jazz</div>
+          </div>
+          <div class="profile-match">97% match</div>
+        </div>
+        <div class="profile-row">
+          <div class="profile-pic p2"></div>
+          <div class="profile-info">
+            <div class="profile-name">Priya K.</div>
+            <div class="profile-tag">Design · Books · Travel</div>
+          </div>
+          <div class="profile-match">92% match</div>
+        </div>
+        <div class="profile-row">
+          <div class="profile-pic p3"></div>
+          <div class="profile-info">
+            <div class="profile-name">Marcus T.</div>
+            <div class="profile-tag">Tech · Hiking · Stoicism</div>
+          </div>
+          <div class="profile-match">89% match</div>
+        </div>
+        <div style="background: rgba(62,255,163,0.08); border: 1px solid rgba(62,255,163,0.2); border-radius: 12px; padding: 14px 16px; margin-top: 4px;">
+          <p style="font-size: 0.78rem; color: var(--accent); font-weight: 600; margin-bottom: 4px;">🎯 Your match today →</p>
+          <p style="font-size: 0.82rem; color: var(--muted); line-height: 1.5;">Jordan is also into Marcus Aurelius and building side projects. Series generated a conversation starter for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-grid reveal">
+    <div class="stat-item">
+      <div class="stat-num">94%</div>
+      <div class="stat-label">Match satisfaction rate</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50K+</div>
+      <div class="stat-label">Active members</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3.2M</div>
+      <div class="stat-label">Conversations started</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8min</div>
+      <div class="stat-label">Avg. first reply time</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="reveal" style="text-align: center;">
+    <div class="section-label" style="justify-content: center;">Real stories</div>
+    <h2 class="section-headline">People actually<br>connecting. Imagine that.</h2>
+  </div>
+  <div class="testimonials-grid reveal">
+    <div class="testimonial">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"I met my current co-founder on Series. We bonded over stoicism and YC rejections. Three months later we're building together."</p>
+      <div class="t-author">
+        <div class="t-avatar ta1"></div>
+        <div>
+          <div class="t-name">Daniel R.</div>
+          <div class="t-role">Founder, YC S23</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"Finally a social app where I don't feel like I'm performing. Every conversation I've had on Series has felt genuinely human."</p>
+      <div class="t-author">
+        <div class="t-avatar ta2"></div>
+        <div>
+          <div class="t-name">Natalie C.</div>
+          <div class="t-role">UX Designer</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"I deleted Instagram and Twitter after finding Series. The quality of connection here is just on a completely different level."</p>
+      <div class="t-author">
+        <div class="t-avatar ta3"></div>
+        <div>
+          <div class="t-name">Marcus O.</div>
+          <div class="t-role">Writer & Podcaster</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="reveal" style="text-align: center;">
+    <div class="section-label" style="justify-content: center;">Pricing</div>
+    <h2 class="section-headline">Simple, honest pricing.</h2>
+    <p class="section-sub" style="margin: 0 auto;">Start free. Upgrade when you're ready for more connections.</p>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card">
+      <div class="plan-name">Free</div>
+      <div class="plan-price">$0</div>
+      <div class="plan-period">forever, no credit card</div>
+      <ul class="plan-features">
+        <li class="plan-feature active">1 match per day</li>
+        <li class="plan-feature active">iMessage integration</li>
+        <li class="plan-feature active">Interest profile</li>
+        <li class="plan-feature inactive">Priority matching</li>
+        <li class="plan-feature inactive">Unlimited matches</li>
+        <li class="plan-feature inactive">Match insights</li>
+      </ul>
+      <button class="btn-plan">Get started free</button>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">$12</div>
+      <div class="plan-period">per month, billed monthly</div>
+      <ul class="plan-features">
+        <li class="plan-feature active">3 matches per day</li>
+        <li class="plan-feature active">iMessage integration</li>
+        <li class="plan-feature active">Interest profile</li>
+        <li class="plan-feature active">Priority matching</li>
+        <li class="plan-feature active">Match insights</li>
+        <li class="plan-feature inactive">White-glove curation</li>
+      </ul>
+      <button class="btn-plan featured">Start Pro — $12/mo</button>
+    </div>
+    <div class="pricing-card">
+      <div class="plan-name">Elite</div>
+      <div class="plan-price">$39</div>
+      <div class="plan-period">per month, billed monthly</div>
+      <ul class="plan-features">
+        <li class="plan-feature active">Unlimited matches</li>
+        <li class="plan-feature active">iMessage integration</li>
+        <li class="plan-feature active">Interest profile</li>
+        <li class="plan-feature active">Priority matching</li>
+        <li class="plan-feature active">Match insights</li>
+        <li class="plan-feature active">White-glove curation</li>
+      </ul>
+      <button class="btn-plan">Go Elite</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="reveal">
+    <div class="section-label" style="justify-content: center;">Get started</div>
+    <h2 class="section-headline">Stop scrolling.<br>Start <em>connecting.</em></h2>
+    <p class="section-sub">Join 50,000+ people who chose real conversations over vanity metrics. Free forever, no credit card needed.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn-hero">
+        Create Your Free Account
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <p class="cta-fine">No credit card • Works with iMessage • Cancel anytime</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Series<span>.</span></div>
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Terms of Use</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Series. All rights reserved.</div>
+</footer>
 
 <script>
-$(function () { $(window).keydown(function (event) { if (event.keyCode == 13) { event.preventDefault(); return false; } }); });
-let anchorLinks = document.querySelectorAll("a");
-for (let i = 0; i < anchorLinks.length; i += 1) { if (anchorLinks[i].host !== window.location.hostname) { anchorLinks[i].setAttribute("target", "_blank"); } }
-</script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const aiTarget = document.getElementById("ai-target");
-  const fraudTarget = document.getElementById("fraud-target");
-  const amlTarget = document.getElementById("aml-target");
-  const allTargets = [aiTarget, fraudTarget, amlTarget].filter(Boolean);
-  const aiTagTriggers = ["ai-tag-trigger"];
-  const fraudTagTriggers = ["monitoring-tag-trigger", "device-tag-trigger", "fraud-tag-trigger"];
-  const allTagTriggers = ["ai-tag-trigger","monitoring-tag-trigger","transaction-tag-trigger","sanction-tag-trigger","case-tag-trigger","regulatory-tag-trigger","customer-tag-trigger","payment-tag-trigger","fraud-tag-trigger","device-tag-trigger"];
-  const tagToRegularTriggerMap = {"ai-tag-trigger": "ai-trigger-1","monitoring-tag-trigger": "monitoring-trigger","transaction-tag-trigger": "transaction-trigger","sanction-tag-trigger": "sanction-trigger","case-tag-trigger": "case-trigger","regulatory-tag-trigger": "regulatory-trigger","customer-tag-trigger": "customer-trigger","payment-tag-trigger": "payment-trigger","fraud-tag-trigger": "fraud-trigger","device-tag-trigger": "device-trigger"};
-  function showTarget(targetToShow) { allTargets.forEach((target) => { if (!target) return; target.style.display = target === targetToShow ? "block" : "none"; }); }
-  function setActiveTag(activeId) { allTagTriggers.forEach((id) => { const el = document.getElementById(id); if (!el) return; el.classList.toggle("ncc-active", id === activeId); }); }
-  function isActuallyVisible(el) { return !!el && window.getComputedStyle(el).display !== "none"; }
-  function getVisibleSection() { if (isActuallyVisible(aiTarget)) return aiTarget; if (isActuallyVisible(fraudTarget)) return fraudTarget; if (isActuallyVisible(amlTarget)) return amlTarget; return null; }
-  function hideImagesInSection(section) { if (!section) return; section.querySelectorAll('img[id*="-img"]').forEach((img) => { img.style.display = "none"; }); }
-  function getMatchingImageId(triggerId) { if (!triggerId) return null; if (triggerId.startsWith("ai-trigger-")) { const suffix = triggerId.replace("ai-trigger-", ""); return `ai-img-${suffix}`; } return triggerId.replace("-trigger", "-img"); }
-  function showMatchingImage(triggerId, section) { if (!triggerId || !section) return; const imageId = getMatchingImageId(triggerId); const matchingImg = document.getElementById(imageId); if (!matchingImg) return; hideImagesInSection(section); matchingImg.style.display = "block"; }
-  function updateVisibleImagesFromOpenDropdowns() { const visibleSection = getVisibleSection(); if (!visibleSection) return; const dropdowns = visibleSection.querySelectorAll('.w-dropdown[id*="trigger"]'); let openDropdown = null; dropdowns.forEach((dropdown) => { if (dropdown.querySelector(".w--open")) { openDropdown = dropdown; } }); if (openDropdown) { showMatchingImage(openDropdown.id, visibleSection); } }
-  function fireRealClick(el) { ["mousedown", "mouseup", "click"].forEach((type) => { el.dispatchEvent(new MouseEvent(type, { view: window, bubbles: true, cancelable: true })); }); }
-  function openMappedRegularTrigger(tagId) { const regularTriggerId = tagToRegularTriggerMap[tagId]; if (!regularTriggerId) return; const regularTrigger = document.getElementById(regularTriggerId); if (!regularTrigger) return; const toggle = regularTrigger.querySelector(".w-dropdown-toggle"); if (!toggle) return; if (!toggle.classList.contains("w--open")) { fireRealClick(toggle); } setTimeout(updateVisibleImagesFromOpenDropdowns, 80); }
-  allTagTriggers.forEach((id) => { const tag = document.getElementById(id); if (!tag) return; tag.addEventListener("click", function (e) { e.preventDefault(); setActiveTag(id); if (aiTagTriggers.includes(id)) { showTarget(aiTarget); } else if (fraudTagTriggers.includes(id)) { showTarget(fraudTarget); } else { showTarget(amlTarget); } setTimeout(() => { openMappedRegularTrigger(id); }, 120); }); });
-  document.addEventListener("click", function (e) { const trigger = e.target.closest('.w-dropdown[id*="trigger"]'); if (!trigger) return; if (trigger.id.includes("-tag-trigger")) return; setTimeout(updateVisibleImagesFromOpenDropdowns, 80); });
-  updateVisibleImagesFromOpenDropdowns();
-  setTimeout(() => { const defaultTag = "ai-tag-trigger"; setActiveTag(defaultTag); showTarget(aiTarget); openMappedRegularTrigger(defaultTag); }, 150);
-});
-</script>
+  reveals.forEach(el => observer.observe(el));
 
-<script>
-const uniqueWrappers = Array.prototype.slice.call(document.querySelectorAll(".unique-wrapper"));
-uniqueWrappers.forEach((wrapper, i) => {
-  const productAccordionWrapper = wrapper.querySelector(".product-accordion-wrapper");
-  const productAccordionImageWrapper = wrapper.querySelector(".product-accordion-images");
-  const productAccordionImages = Array.prototype.slice.call(productAccordionImageWrapper.querySelectorAll(".product-accordion-image"));
-  const productAccordions = Array.prototype.slice.call(productAccordionWrapper.querySelectorAll(".product-accordion"));
-  productAccordionImages[0].classList.add("active");
-  productAccordions.forEach((accordion, j, all) => {
-    accordion.addEventListener("click", () => {
-      productAccordionImages.forEach((image) => { image.classList.remove("active"); });
-      all.forEach((item) => { item.classList.remove("active"); });
-      productAccordionImages[j].classList.add("active");
-      accordion.classList.add("active");
+  // Nav transparency on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.borderBottomColor = 'rgba(255,255,255,0.1)';
+    } else {
+      nav.style.borderBottomColor = 'rgba(255,255,255,0.07)';
+    }
+  });
+
+  // Step hover states
+  const steps = document.querySelectorAll('.step');
+  steps.forEach(step => {
+    step.addEventListener('mouseenter', () => {
+      steps.forEach(s => s.classList.remove('active'));
+      step.classList.add('active');
     });
   });
-});
 </script>
-
-<style>* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }</style>
-<script async src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js"></script>
-</body></html>
-HTMLEOF
-echo "File created successfully"
-wc -l /home/claude/rebuilt_landing.html
-Sortie
-
-Command argument is 126_082 bytes, exceeding the 100_000-byte per-argument limit. For large content, pipe via stdin or use a file-write API instead of embedding the content inline in the command. Argument preview: 'cat > /home/claude/rebuilt_landing.html << \'HTMLEOF\'\n<!DOCTYPE html><!-- Last Published: Thu Apr 30 2026 21:03:59 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.unit21.ai" data-wf-'
+</body>
+</html>
